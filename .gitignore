@@ -69,3 +69,6 @@ fastlane/test_output
 # python
 backend/venv
 *.pyc
+
+# Mac
+.DS_Store
