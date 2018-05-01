@@ -1,11 +1,41 @@
+import base64
+import requests
+import os
+from music_streamz import Db as db
 
-def query_spotify(q, type, page):
+QUERY_TYPES = ['song', 'album', 'artist']
+
+def query_db_or_online(q, q_type, page):
   """
-  Queries Spotify for a specific query.
+  Returns data from DB, if it has been put into the DB. Else,
+  query Spotify, add it to the DB, and return the data.
 
   q (string)
-  type (string): must be one of ['song', 'album', 'artist']
+  q_type (string): must be one of ['song', 'album', 'artist']
   page (int)
+
+  return (list of dicts)
+  """
+
+  query_result = db.query_searches_table(q, q_type, page)
+
+  # get data from Spotify if it is not in DB and put it in DB
+  if not query_result:
+    query_result = query_spotify(q, q_type, page)
+    db.insert_searches_table(q, q_type, page, query_result)
+
+  return query_result
+
+
+def query_spotify(q, q_type, page):
+  """
+  Queries Spotify for a specific query and returns this data.
+
+  q (string)
+  q_type (string): must be one of ['song', 'album', 'artist']
+  page (int)
+
+  return (list of dicts)
   """
 
   # first get access_token
@@ -23,23 +53,46 @@ def query_spotify(q, type, page):
   access_token = r.json()['access_token']
 
 
-  # then get songs
-  if type == 'song':
-    type = 'track'
+  # then get search results
+  if q_type == 'song':
+    q_type = 'track'
 
-  url = 'https://api.spotify.com/v1/search?q=' + q + '&type=' + type
+  url = 'https://api.spotify.com/v1/search?q=' + q + '&type=' + q_type
   headers = {"Authorization": "Bearer " + access_token}
 
   r = requests.get(url, headers=headers)
   if r.status_code != 200:
     raise ValueError('Error querying Spotify')
 
-  r_json = r.json()
+  results = r.json()[q_type + 's']['items']
 
-  results = {
-    'albums': [album['name'] for album in r_json['albums']['items']],
-    'songs': [song['name'] for song in r_json['tracks']['items']]
-  }
+  if q_type == 'track':
+    mod_results = [
+      {
+        'song_name': track['name'],
+        'artist_name': track['artists'][0]['name'],
+        'album_name': track['album']['name'],
+        'album_url': track['album']['images'][1]['url'],
+        'preview_url': track['preview_url']
+      }
+      for track in results
+    ]
+  elif q_type == 'album':
+    mod_results = [
+      {
+        'album_name': album['name'],
+        'artist_name': album['artists'][0]['name'],
+        'album_image': album['images'][1]['url']
+      }
+      for album in results
+    ]
+  else:
+    mod_results = [
+      {
+        'artist_name': artist['name'],
+        'artist_image': artist['images'][1]['url'] if artist['images'] else ''
+      }
+      for artist in results
+    ]
 
-
-  return jsonify(results)
+  return mod_results

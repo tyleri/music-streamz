@@ -21,8 +21,8 @@ class DB(object):
     try:
       self.conn.execute("""
         CREATE TABLE searches (
-            q TEXT PRIMARY KEY NOT NULL,
-            type TEXT NOT NULL,
+            q TEXT NOT NULL,
+            q_type TEXT NOT NULL,
             page INT NOT NULL,
             json TEXT NOT NULL
         );
@@ -34,31 +34,41 @@ class DB(object):
   #   # TODO - Implement this to delete a task table
   #   pass
 
-  def query_searches_table(self, q, type, page):
+  def query_searches_table(self, q, q_type, page):
+    """
+    Returns a list of dictionaries (search results) for the given
+    query, query type, and page number.
+
+    Returns None if the specified combination of query, query type,
+    and page number are not in the DB.
+    """
+
     cursor = self.conn.execute(
         """
           SELECT json FROM searches
-          WHERE q = ? AND type = ? AND page = ?;
+          WHERE q = ? AND q_type = ? AND page = ?
+          LIMIT 1;
         """,
-        (q, type, page)
+        (q, q_type, page)
     )
 
-    return [row[0] for row in cursor]
-    # for row in cursor:
-    #   print "ID = ", row[0]
-    #   print "NAME = ", row[1]
-    #   print "ADDRESS = ", row[2], "\n"
+    query_result = cursor.fetchone()
+    if not query_result:
+      return None
+    else:
+      return json.loads(query_result[0])
 
-  def insert_searches_table(self, q, type, page, json):
+  def insert_searches_table(self, q, q_type, page, results_list):
     """
-    Demonstrates how to perform an insert operation.
+    Inserts the results_list as JSON into the DB along with the
+    query, query type, and page number.
     """
     self.conn.execute(
       """
-        INSERT INTO searches (q, type, page, json)
+        INSERT INTO searches (q, q_type, page, json)
         VALUES (?, ?, ?, ?);
       """,
-      (q, type, page, json)
+      (q, q_type, page, json.dumps(results_list))
     )
     self.conn.commit()
 
