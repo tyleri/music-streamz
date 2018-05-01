@@ -75,3 +75,9 @@ backend/venv
 
 # Visual Studio Code
 .vscode
+
+# SQLite DB
+backend/*.db
+
+# Environment variables
+.env
