@@ -12,23 +12,56 @@ def singleton(cls):
   return getinstance
 
 class DB(object):
-  """
-  DB driver for the Todo app - deals with writing entities
-  to the DB and reading entities from the DB
-  """
 
   def __init__(self):
     self.conn = sqlite3.connect("music_streamz.db", check_same_thread=False)
-    self.example_create_table() # Delete this line when implementing
-    # TODO - Create all other tables here
+    self.create_searches_table()
 
-  def create_task_table(self):
-    # TODO - Implement this to create a task table
-    pass
+  def create_searches_table(self):
+    try:
+      self.conn.execute("""
+        CREATE TABLE searches (
+            q TEXT PRIMARY KEY NOT NULL,
+            type TEXT NOT NULL,
+            page INT NOT NULL,
+            json TEXT NOT NULL
+        );
+      """)
+    except Exception as e: print e
 
-  def delete_task_table(self):
-    # TODO - Implement this to delete a task table
-    pass
+
+  # def delete_task_table(self):
+  #   # TODO - Implement this to delete a task table
+  #   pass
+
+  def query_searches_table(self, q, type, page):
+    cursor = self.conn.execute(
+        """
+          SELECT json FROM searches
+          WHERE q = ? AND type = ? AND page = ?;
+        """,
+        (q, type, page)
+    )
+
+    return [row[0] for row in cursor]
+    # for row in cursor:
+    #   print "ID = ", row[0]
+    #   print "NAME = ", row[1]
+    #   print "ADDRESS = ", row[2], "\n"
+
+  def insert_searches_table(self, q, type, page, json):
+    """
+    Demonstrates how to perform an insert operation.
+    """
+    self.conn.execute(
+      """
+        INSERT INTO searches (q, type, page, json)
+        VALUES (?, ?, ?, ?);
+      """,
+      (q, type, page, json)
+    )
+    self.conn.commit()
+
 
   def example_create_table(self):
     """
