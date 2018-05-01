@@ -21,9 +21,7 @@ def search():
     if q is None:
         abort(400)
 
-    if q_type == 'song':
-        q_type = 'track'
-    elif q_type not in QUERY_TYPES:
+    if q_type not in QUERY_TYPES:
         q_type = None
 
     if page is None or not page.isdigit():
@@ -39,7 +37,7 @@ def search():
     for QT in QUERY_TYPES:
         if q_type == QT or q_type is None:
             query_result = query_db_or_online(q, QT, page)
-            results_dict[QT] = query_result
+            results_dict[QT + 's'] = query_result
 
     return jsonify(results_dict)
 

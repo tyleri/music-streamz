@@ -3,7 +3,7 @@ import requests
 import os
 from music_streamz import Db as db
 
-QUERY_TYPES = ['song', 'album', 'artist']
+QUERY_TYPES = ['track', 'album', 'artist']
 
 def query_db_or_online(q, q_type, page):
   """
@@ -11,7 +11,7 @@ def query_db_or_online(q, q_type, page):
   query Spotify, add it to the DB, and return the data.
 
   q (string)
-  q_type (string): must be one of ['song', 'album', 'artist']
+  q_type (string): must be one of ['track', 'album', 'artist']
   page (int)
 
   return (list of dicts)
@@ -32,7 +32,7 @@ def query_spotify(q, q_type, page):
   Queries Spotify for a specific query and returns this data.
 
   q (string)
-  q_type (string): must be one of ['song', 'album', 'artist']
+  q_type (string): must be one of ['track', 'album', 'artist']
   page (int)
 
   return (list of dicts)
@@ -54,9 +54,6 @@ def query_spotify(q, q_type, page):
 
 
   # then get search results
-  if q_type == 'song':
-    q_type = 'track'
-
   url = 'https://api.spotify.com/v1/search?q=' + q + '&type=' + q_type
   headers = {"Authorization": "Bearer " + access_token}
 
@@ -69,11 +66,11 @@ def query_spotify(q, q_type, page):
   if q_type == 'track':
     mod_results = [
       {
-        'song_name': track['name'],
+        'track_name': track['name'],
         'artist_name': track['artists'][0]['name'],
         'album_name': track['album']['name'],
-        'album_url': track['album']['images'][1]['url'],
-        'preview_url': track['preview_url']
+        'album_image': track['album']['images'][1]['url'],
+        'preview_url': track['preview_url'] if track['preview_url'] else ''
       }
       for track in results
     ]
