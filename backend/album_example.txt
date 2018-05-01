@@ -1,0 +1,731 @@
+{
+  "albums" : {
+    "href" : "https://api.spotify.com/v1/search?query=TWICE&type=album&offset=0&limit=20",
+    "items" : [ {
+      "album_type" : "single",
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/7n2Ycct7Beij7Dj7meI4X0"
+        },
+        "href" : "https://api.spotify.com/v1/artists/7n2Ycct7Beij7Dj7meI4X0",
+        "id" : "7n2Ycct7Beij7Dj7meI4X0",
+        "name" : "TWICE",
+        "type" : "artist",
+        "uri" : "spotify:artist:7n2Ycct7Beij7Dj7meI4X0"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IL", "IS", "IT", "JP", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SK", "SV", "TH", "TR", "TW", "US", "UY", "VN", "ZA" ],
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/album/3RU5xvGbTAXCWoUSqGf7dk"
+      },
+      "href" : "https://api.spotify.com/v1/albums/3RU5xvGbTAXCWoUSqGf7dk",
+      "id" : "3RU5xvGbTAXCWoUSqGf7dk",
+      "images" : [ {
+        "height" : 632,
+        "url" : "https://i.scdn.co/image/6333e7e989d68e665f512f3ca29f389dad6860ff",
+        "width" : 640
+      }, {
+        "height" : 296,
+        "url" : "https://i.scdn.co/image/7bc88788e36b5df13571ddb8a12ed45d22b36407",
+        "width" : 300
+      }, {
+        "height" : 63,
+        "url" : "https://i.scdn.co/image/e70e7e3c31cac1eaa8ea152581252f4a36d6b332",
+        "width" : 64
+      } ],
+      "name" : "#TWICE",
+      "release_date" : "2017-06-28",
+      "release_date_precision" : "day",
+      "type" : "album",
+      "uri" : "spotify:album:3RU5xvGbTAXCWoUSqGf7dk"
+    }, {
+      "album_type" : "single",
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/7n2Ycct7Beij7Dj7meI4X0"
+        },
+        "href" : "https://api.spotify.com/v1/artists/7n2Ycct7Beij7Dj7meI4X0",
+        "id" : "7n2Ycct7Beij7Dj7meI4X0",
+        "name" : "TWICE",
+        "type" : "artist",
+        "uri" : "spotify:artist:7n2Ycct7Beij7Dj7meI4X0"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IL", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SK", "SV", "TH", "TR", "TW", "US", "UY", "VN", "ZA" ],
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/album/5NObA8Cx4Ri5cATR1DLTjj"
+      },
+      "href" : "https://api.spotify.com/v1/albums/5NObA8Cx4Ri5cATR1DLTjj",
+      "id" : "5NObA8Cx4Ri5cATR1DLTjj",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://i.scdn.co/image/14e0b19c0cfb689d914ea021a393f25d77f6eeb8",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/5e2e8885106962f4f8a10223064da14d18c052e1",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/168a5a6a66fcce33e5d89d319fc78ea8faf7d7c1",
+        "width" : 64
+      } ],
+      "name" : "What is Love?",
+      "release_date" : "2018-04-09",
+      "release_date_precision" : "day",
+      "type" : "album",
+      "uri" : "spotify:album:5NObA8Cx4Ri5cATR1DLTjj"
+    }, {
+      "album_type" : "album",
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/7n2Ycct7Beij7Dj7meI4X0"
+        },
+        "href" : "https://api.spotify.com/v1/artists/7n2Ycct7Beij7Dj7meI4X0",
+        "id" : "7n2Ycct7Beij7Dj7meI4X0",
+        "name" : "TWICE",
+        "type" : "artist",
+        "uri" : "spotify:artist:7n2Ycct7Beij7Dj7meI4X0"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IL", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SK", "SV", "TH", "TR", "TW", "US", "UY", "VN", "ZA" ],
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/album/7dOZAeST5qCpfpQRAHq9sa"
+      },
+      "href" : "https://api.spotify.com/v1/albums/7dOZAeST5qCpfpQRAHq9sa",
+      "id" : "7dOZAeST5qCpfpQRAHq9sa",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://i.scdn.co/image/1c2eba4f54e9a90e797ace930676ef6cd87d1779",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/2ebebc9a10a1d914286f4cf15b37f3d0725f5a6c",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/9f6701f2a04b38bc6b5fb30939aca05cfc7a4054",
+        "width" : 64
+      } ],
+      "name" : "twicetagram",
+      "release_date" : "2017-10-30",
+      "release_date_precision" : "day",
+      "type" : "album",
+      "uri" : "spotify:album:7dOZAeST5qCpfpQRAHq9sa"
+    }, {
+      "album_type" : "album",
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/7n2Ycct7Beij7Dj7meI4X0"
+        },
+        "href" : "https://api.spotify.com/v1/artists/7n2Ycct7Beij7Dj7meI4X0",
+        "id" : "7n2Ycct7Beij7Dj7meI4X0",
+        "name" : "TWICE",
+        "type" : "artist",
+        "uri" : "spotify:artist:7n2Ycct7Beij7Dj7meI4X0"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IL", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SK", "SV", "TH", "TR", "TW", "US", "UY", "VN", "ZA" ],
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/album/7z35ak4YnECGLJADDJ4obf"
+      },
+      "href" : "https://api.spotify.com/v1/albums/7z35ak4YnECGLJADDJ4obf",
+      "id" : "7z35ak4YnECGLJADDJ4obf",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://i.scdn.co/image/a7fc15227ce39023c5e3d356efb29e327957cea4",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/7b21e975df9fef1d75c2cb322b0edc17da1ab5e4",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/488fba6c063d16e82d47e76fdd385468555181bd",
+        "width" : 64
+      } ],
+      "name" : "Merry & Happy",
+      "release_date" : "2017-12-11",
+      "release_date_precision" : "day",
+      "type" : "album",
+      "uri" : "spotify:album:7z35ak4YnECGLJADDJ4obf"
+    }, {
+      "album_type" : "album",
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/6ZPbX2Lxd40e2UVkXpyxvI"
+        },
+        "href" : "https://api.spotify.com/v1/artists/6ZPbX2Lxd40e2UVkXpyxvI",
+        "id" : "6ZPbX2Lxd40e2UVkXpyxvI",
+        "name" : "Great White",
+        "type" : "artist",
+        "uri" : "spotify:artist:6ZPbX2Lxd40e2UVkXpyxvI"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IL", "IS", "IT", "JP", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SK", "SV", "TH", "TR", "TW", "US", "UY", "VN", "ZA" ],
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/album/0gPfgxBDkrtJgwIkziS8LI"
+      },
+      "href" : "https://api.spotify.com/v1/albums/0gPfgxBDkrtJgwIkziS8LI",
+      "id" : "0gPfgxBDkrtJgwIkziS8LI",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://i.scdn.co/image/73a5dad55364d3eb7a91f52e84b2ff7b3d68706e",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/e35b3f700f560199e76fc45ec1392e7b61b6be89",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/006a8fc942c75abfebfcf52cf4c3b233650f33a9",
+        "width" : 64
+      } ],
+      "name" : "Twice Shy",
+      "release_date" : "1989-04-12",
+      "release_date_precision" : "day",
+      "type" : "album",
+      "uri" : "spotify:album:0gPfgxBDkrtJgwIkziS8LI"
+    }, {
+      "album_type" : "album",
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/0hYxQe3AK5jBPCr5MumLHD"
+        },
+        "href" : "https://api.spotify.com/v1/artists/0hYxQe3AK5jBPCr5MumLHD",
+        "id" : "0hYxQe3AK5jBPCr5MumLHD",
+        "name" : "Sugarland",
+        "type" : "artist",
+        "uri" : "spotify:artist:0hYxQe3AK5jBPCr5MumLHD"
+      } ],
+      "available_markets" : [ "CA", "MX", "US" ],
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/album/7KkRJXCi3M2XtVMT7qa7Ib"
+      },
+      "href" : "https://api.spotify.com/v1/albums/7KkRJXCi3M2XtVMT7qa7Ib",
+      "id" : "7KkRJXCi3M2XtVMT7qa7Ib",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://i.scdn.co/image/a81e6a138b449d56490e1816682685829724d282",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/aa45005cfd4f0bfe7266ad66addb3cc09be8f84b",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/957f0defa06a2192bb90f48818530c6ce6ac5282",
+        "width" : 64
+      } ],
+      "name" : "Twice The Speed Of Life",
+      "release_date" : "2004-01-01",
+      "release_date_precision" : "day",
+      "type" : "album",
+      "uri" : "spotify:album:7KkRJXCi3M2XtVMT7qa7Ib"
+    }, {
+      "album_type" : "single",
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/7n2Ycct7Beij7Dj7meI4X0"
+        },
+        "href" : "https://api.spotify.com/v1/artists/7n2Ycct7Beij7Dj7meI4X0",
+        "id" : "7n2Ycct7Beij7Dj7meI4X0",
+        "name" : "TWICE",
+        "type" : "artist",
+        "uri" : "spotify:artist:7n2Ycct7Beij7Dj7meI4X0"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IL", "IS", "IT", "JP", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SK", "SV", "TH", "TR", "TW", "US", "UY", "VN", "ZA" ],
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/album/4VAiOU0kXKxArdsYA1SHup"
+      },
+      "href" : "https://api.spotify.com/v1/albums/4VAiOU0kXKxArdsYA1SHup",
+      "id" : "4VAiOU0kXKxArdsYA1SHup",
+      "images" : [ {
+        "height" : 632,
+        "url" : "https://i.scdn.co/image/eba07320c308e7a3d0009e670aaa9c646980df67",
+        "width" : 640
+      }, {
+        "height" : 296,
+        "url" : "https://i.scdn.co/image/ccf9987f147c82d9e85820089ef750596bacc0fe",
+        "width" : 300
+      }, {
+        "height" : 63,
+        "url" : "https://i.scdn.co/image/673c0e747aab5ace8d9dea499efd0ec901576d72",
+        "width" : 64
+      } ],
+      "name" : "Wake Me Up",
+      "release_date" : "2018-04-25",
+      "release_date_precision" : "day",
+      "type" : "album",
+      "uri" : "spotify:album:4VAiOU0kXKxArdsYA1SHup"
+    }, {
+      "album_type" : "album",
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/7n2Ycct7Beij7Dj7meI4X0"
+        },
+        "href" : "https://api.spotify.com/v1/artists/7n2Ycct7Beij7Dj7meI4X0",
+        "id" : "7n2Ycct7Beij7Dj7meI4X0",
+        "name" : "TWICE",
+        "type" : "artist",
+        "uri" : "spotify:artist:7n2Ycct7Beij7Dj7meI4X0"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IL", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SK", "SV", "TH", "TR", "TW", "US", "UY", "VN", "ZA" ],
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/album/7CgL5c3BKZUnYgh8uWdeQQ"
+      },
+      "href" : "https://api.spotify.com/v1/albums/7CgL5c3BKZUnYgh8uWdeQQ",
+      "id" : "7CgL5c3BKZUnYgh8uWdeQQ",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://i.scdn.co/image/85b1f0170be0671aba3592a60b55d5d5aaa64469",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/09961a844c1d63aa0d262a59ed5a1f5762fe4beb",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/8c4afd5b863745df4fb8e192e2f057c1e94f0f9e",
+        "width" : 64
+      } ],
+      "name" : "TWICEcoaster : LANE 2",
+      "release_date" : "2017-02-20",
+      "release_date_precision" : "day",
+      "type" : "album",
+      "uri" : "spotify:album:7CgL5c3BKZUnYgh8uWdeQQ"
+    }, {
+      "album_type" : "album",
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/7n2Ycct7Beij7Dj7meI4X0"
+        },
+        "href" : "https://api.spotify.com/v1/artists/7n2Ycct7Beij7Dj7meI4X0",
+        "id" : "7n2Ycct7Beij7Dj7meI4X0",
+        "name" : "TWICE",
+        "type" : "artist",
+        "uri" : "spotify:artist:7n2Ycct7Beij7Dj7meI4X0"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IL", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SK", "SV", "TH", "TR", "TW", "US", "UY", "VN", "ZA" ],
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/album/1O0JME3VbK4siDIfh6K3Oe"
+      },
+      "href" : "https://api.spotify.com/v1/albums/1O0JME3VbK4siDIfh6K3Oe",
+      "id" : "1O0JME3VbK4siDIfh6K3Oe",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://i.scdn.co/image/ceabcd8c4ab2463ac3aacc5ff8e561a04fadd700",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/f186d4d5d6b2a1980f2ea9570492e51c023703af",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/bce8bf0dd610a6eeba6500a386b5e67f2cc25177",
+        "width" : 64
+      } ],
+      "name" : "TWICEcoaster: LANE1",
+      "release_date" : "2016-10-24",
+      "release_date_precision" : "day",
+      "type" : "album",
+      "uri" : "spotify:album:1O0JME3VbK4siDIfh6K3Oe"
+    }, {
+      "album_type" : "single",
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/1z7b1Pr1rSlvWRzsW3HOrS"
+        },
+        "href" : "https://api.spotify.com/v1/artists/1z7b1Pr1rSlvWRzsW3HOrS",
+        "id" : "1z7b1Pr1rSlvWRzsW3HOrS",
+        "name" : "Russ",
+        "type" : "artist",
+        "uri" : "spotify:artist:1z7b1Pr1rSlvWRzsW3HOrS"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IL", "IS", "IT", "JP", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SK", "SV", "TH", "TR", "TW", "US", "UY", "VN", "ZA" ],
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/album/5CXGQ4C9UWN5rxOmdeYTu8"
+      },
+      "href" : "https://api.spotify.com/v1/albums/5CXGQ4C9UWN5rxOmdeYTu8",
+      "id" : "5CXGQ4C9UWN5rxOmdeYTu8",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://i.scdn.co/image/dcc1a76f3807664e326f39c01ba6aa0165b0de7e",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/c4bfcc03e9aa64fdda6fbf6f33cad2b65bf9ce8a",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/42c0e34d60ae5d3d30e0cce8f7793e96ffa08334",
+        "width" : 64
+      } ],
+      "name" : "Think Twice",
+      "release_date" : "2017-09-22",
+      "release_date_precision" : "day",
+      "type" : "album",
+      "uri" : "spotify:album:5CXGQ4C9UWN5rxOmdeYTu8"
+    }, {
+      "album_type" : "single",
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/7n2Ycct7Beij7Dj7meI4X0"
+        },
+        "href" : "https://api.spotify.com/v1/artists/7n2Ycct7Beij7Dj7meI4X0",
+        "id" : "7n2Ycct7Beij7Dj7meI4X0",
+        "name" : "TWICE",
+        "type" : "artist",
+        "uri" : "spotify:artist:7n2Ycct7Beij7Dj7meI4X0"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IL", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SK", "SV", "TH", "TR", "TW", "US", "UY", "VN", "ZA" ],
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/album/4VfP4RWW7MPg5hOCvIgUYE"
+      },
+      "href" : "https://api.spotify.com/v1/albums/4VfP4RWW7MPg5hOCvIgUYE",
+      "id" : "4VfP4RWW7MPg5hOCvIgUYE",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://i.scdn.co/image/770c9b5ddc0a151bf255406b7285abb121dd7a30",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/cf97b055cb8488b55abf3528f8c830f63c5f8080",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/5b00f5350c99d46a973304610cefcd4dda9684b9",
+        "width" : 64
+      } ],
+      "name" : "SIGNAL",
+      "release_date" : "2017-05-15",
+      "release_date_precision" : "day",
+      "type" : "album",
+      "uri" : "spotify:album:4VfP4RWW7MPg5hOCvIgUYE"
+    }, {
+      "album_type" : "single",
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/3jksrX4oBklxR78ft8gv3j"
+        },
+        "href" : "https://api.spotify.com/v1/artists/3jksrX4oBklxR78ft8gv3j",
+        "id" : "3jksrX4oBklxR78ft8gv3j",
+        "name" : "Plies",
+        "type" : "artist",
+        "uri" : "spotify:artist:3jksrX4oBklxR78ft8gv3j"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IL", "IS", "IT", "JP", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SK", "SV", "TH", "TR", "TW", "US", "UY", "VN", "ZA" ],
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/album/3gjBLAFnc4dtQu39XoPghe"
+      },
+      "href" : "https://api.spotify.com/v1/albums/3gjBLAFnc4dtQu39XoPghe",
+      "id" : "3gjBLAFnc4dtQu39XoPghe",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://i.scdn.co/image/a108a9b36410ed2eec459287803448f166cf1c64",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/4acb259446aeb3dbbeb913baa7efc3163a5a70ab",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/b7615b76d83daea522cf1ec9b212f8f5c464013b",
+        "width" : 64
+      } ],
+      "name" : "Ran Off On Da Plug Twice",
+      "release_date" : "2016-01-29",
+      "release_date_precision" : "day",
+      "type" : "album",
+      "uri" : "spotify:album:3gjBLAFnc4dtQu39XoPghe"
+    }, {
+      "album_type" : "single",
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/7n2Ycct7Beij7Dj7meI4X0"
+        },
+        "href" : "https://api.spotify.com/v1/artists/7n2Ycct7Beij7Dj7meI4X0",
+        "id" : "7n2Ycct7Beij7Dj7meI4X0",
+        "name" : "TWICE",
+        "type" : "artist",
+        "uri" : "spotify:artist:7n2Ycct7Beij7Dj7meI4X0"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IL", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SK", "SV", "TH", "TR", "TW", "US", "UY", "VN", "ZA" ],
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/album/1AHK0VYfnND7mAiZ5VneXG"
+      },
+      "href" : "https://api.spotify.com/v1/albums/1AHK0VYfnND7mAiZ5VneXG",
+      "id" : "1AHK0VYfnND7mAiZ5VneXG",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://i.scdn.co/image/9c581e4951265c3c7a768e72519be88947758755",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/e1f599b1c5007618b8f9dbbd43503cf2682f51a3",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/7d75e76736f03f97e46c724b6f5a61c0da498b64",
+        "width" : 64
+      } ],
+      "name" : "PAGE TWO",
+      "release_date" : "2016-04-25",
+      "release_date_precision" : "day",
+      "type" : "album",
+      "uri" : "spotify:album:1AHK0VYfnND7mAiZ5VneXG"
+    }, {
+      "album_type" : "single",
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/7n2Ycct7Beij7Dj7meI4X0"
+        },
+        "href" : "https://api.spotify.com/v1/artists/7n2Ycct7Beij7Dj7meI4X0",
+        "id" : "7n2Ycct7Beij7Dj7meI4X0",
+        "name" : "TWICE",
+        "type" : "artist",
+        "uri" : "spotify:artist:7n2Ycct7Beij7Dj7meI4X0"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IL", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SK", "SV", "TH", "TR", "TW", "US", "UY", "VN", "ZA" ],
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/album/3uLLMZwXdtGAD3BAB12jUM"
+      },
+      "href" : "https://api.spotify.com/v1/albums/3uLLMZwXdtGAD3BAB12jUM",
+      "id" : "3uLLMZwXdtGAD3BAB12jUM",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://i.scdn.co/image/5e8e0f739f8b737f80b7da2f784631b302ccd880",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/34601aff12d8415fa34dd26093cf66ac8a3faef5",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/65aa3f0a6a99d4f38a63f40648b7afa130a4b877",
+        "width" : 64
+      } ],
+      "name" : "THE STORY BEGINS",
+      "release_date" : "2015-10-20",
+      "release_date_precision" : "day",
+      "type" : "album",
+      "uri" : "spotify:album:3uLLMZwXdtGAD3BAB12jUM"
+    }, {
+      "album_type" : "album",
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/0V7uVrIYr4FwFvUN9S4kYr"
+        },
+        "href" : "https://api.spotify.com/v1/artists/0V7uVrIYr4FwFvUN9S4kYr",
+        "id" : "0V7uVrIYr4FwFvUN9S4kYr",
+        "name" : "Nick Waterhouse",
+        "type" : "artist",
+        "uri" : "spotify:artist:0V7uVrIYr4FwFvUN9S4kYr"
+      } ],
+      "available_markets" : [ "AR", "BO", "BR", "CA", "CL", "CO", "CR", "DO", "EC", "GT", "HK", "HN", "ID", "MX", "MY", "NI", "PA", "PE", "PH", "PY", "SG", "SV", "TH", "TW", "US", "UY", "VN" ],
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/album/1n7mh4RNTjm8oPwzE9yXFo"
+      },
+      "href" : "https://api.spotify.com/v1/albums/1n7mh4RNTjm8oPwzE9yXFo",
+      "id" : "1n7mh4RNTjm8oPwzE9yXFo",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://i.scdn.co/image/0e71d55bbc822cf2b6d6209d32112b3a101a160c",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/86a1ba9307fee961039d98b44064ad794138520b",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/af3354dadd26b7c6f04631f7e811ee7cd0094ff6",
+        "width" : 64
+      } ],
+      "name" : "Never Twice",
+      "release_date" : "2016",
+      "release_date_precision" : "year",
+      "type" : "album",
+      "uri" : "spotify:album:1n7mh4RNTjm8oPwzE9yXFo"
+    }, {
+      "album_type" : "single",
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/7n2Ycct7Beij7Dj7meI4X0"
+        },
+        "href" : "https://api.spotify.com/v1/artists/7n2Ycct7Beij7Dj7meI4X0",
+        "id" : "7n2Ycct7Beij7Dj7meI4X0",
+        "name" : "TWICE",
+        "type" : "artist",
+        "uri" : "spotify:artist:7n2Ycct7Beij7Dj7meI4X0"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IL", "IS", "IT", "JP", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SK", "SV", "TH", "TR", "TW", "US", "UY", "VN", "ZA" ],
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/album/0dbDXtPkq4b4zViH3q9Lnt"
+      },
+      "href" : "https://api.spotify.com/v1/albums/0dbDXtPkq4b4zViH3q9Lnt",
+      "id" : "0dbDXtPkq4b4zViH3q9Lnt",
+      "images" : [ {
+        "height" : 632,
+        "url" : "https://i.scdn.co/image/ebc421247e260e1a846bd48e05fbfbbae440f339",
+        "width" : 640
+      }, {
+        "height" : 296,
+        "url" : "https://i.scdn.co/image/b3058e0a366071270864de349449a0a2068b319d",
+        "width" : 300
+      }, {
+        "height" : 63,
+        "url" : "https://i.scdn.co/image/42156f1cccf800c1ddead3f68c9fc166424e7fb6",
+        "width" : 64
+      } ],
+      "name" : "Candy Pop",
+      "release_date" : "2018-01-12",
+      "release_date_precision" : "day",
+      "type" : "album",
+      "uri" : "spotify:album:0dbDXtPkq4b4zViH3q9Lnt"
+    }, {
+      "album_type" : "album",
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/2yp6zqk49KOKKrOSSsUb75"
+        },
+        "href" : "https://api.spotify.com/v1/artists/2yp6zqk49KOKKrOSSsUb75",
+        "id" : "2yp6zqk49KOKKrOSSsUb75",
+        "name" : "TWICE",
+        "type" : "artist",
+        "uri" : "spotify:artist:2yp6zqk49KOKKrOSSsUb75"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IL", "IS", "IT", "JP", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SK", "SV", "TH", "TR", "TW", "US", "UY", "VN", "ZA" ],
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/album/0EVNwXkNBSELUm77LEcc5R"
+      },
+      "href" : "https://api.spotify.com/v1/albums/0EVNwXkNBSELUm77LEcc5R",
+      "id" : "0EVNwXkNBSELUm77LEcc5R",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://i.scdn.co/image/5a649b30c8c7d853a08b343ff67fd9a188b2988a",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/1fe5dca3e18150572ab6ffab11e9a2040ac152ba",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/3c8391128529510e85090cd95c4e90b8b8bdb594",
+        "width" : 64
+      } ],
+      "name" : "Sesión Orgánica (Vol. 4)",
+      "release_date" : "2017-09-21",
+      "release_date_precision" : "day",
+      "type" : "album",
+      "uri" : "spotify:album:0EVNwXkNBSELUm77LEcc5R"
+    }, {
+      "album_type" : "album",
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/1fwuUuFbqXJx3B17PUhFCE"
+        },
+        "href" : "https://api.spotify.com/v1/artists/1fwuUuFbqXJx3B17PUhFCE",
+        "id" : "1fwuUuFbqXJx3B17PUhFCE",
+        "name" : "Hollie Cook",
+        "type" : "artist",
+        "uri" : "spotify:artist:1fwuUuFbqXJx3B17PUhFCE"
+      } ],
+      "available_markets" : [ "CA", "US" ],
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/album/7A8gJglITsO8pUdnzcS6Gf"
+      },
+      "href" : "https://api.spotify.com/v1/albums/7A8gJglITsO8pUdnzcS6Gf",
+      "id" : "7A8gJglITsO8pUdnzcS6Gf",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://i.scdn.co/image/156de269d0ab6c28eaa6acaa64bbb4a640eaf59e",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/39031012fc83a7f9593f671b3202532950074bc9",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/985572221bab9a13901be95089524c2d53ae23f9",
+        "width" : 64
+      } ],
+      "name" : "Twice",
+      "release_date" : "2014-05-12",
+      "release_date_precision" : "day",
+      "type" : "album",
+      "uri" : "spotify:album:7A8gJglITsO8pUdnzcS6Gf"
+    }, {
+      "album_type" : "single",
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/7n2Ycct7Beij7Dj7meI4X0"
+        },
+        "href" : "https://api.spotify.com/v1/artists/7n2Ycct7Beij7Dj7meI4X0",
+        "id" : "7n2Ycct7Beij7Dj7meI4X0",
+        "name" : "TWICE",
+        "type" : "artist",
+        "uri" : "spotify:artist:7n2Ycct7Beij7Dj7meI4X0"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IL", "IS", "IT", "JP", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SK", "SV", "TH", "TR", "TW", "US", "UY", "VN", "ZA" ],
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/album/4t6JjDorVawKA34IhApYC4"
+      },
+      "href" : "https://api.spotify.com/v1/albums/4t6JjDorVawKA34IhApYC4",
+      "id" : "4t6JjDorVawKA34IhApYC4",
+      "images" : [ {
+        "height" : 632,
+        "url" : "https://i.scdn.co/image/ebc421247e260e1a846bd48e05fbfbbae440f339",
+        "width" : 640
+      }, {
+        "height" : 296,
+        "url" : "https://i.scdn.co/image/b3058e0a366071270864de349449a0a2068b319d",
+        "width" : 300
+      }, {
+        "height" : 63,
+        "url" : "https://i.scdn.co/image/42156f1cccf800c1ddead3f68c9fc166424e7fb6",
+        "width" : 64
+      } ],
+      "name" : "Candy Pop",
+      "release_date" : "2018-02-07",
+      "release_date_precision" : "day",
+      "type" : "album",
+      "uri" : "spotify:album:4t6JjDorVawKA34IhApYC4"
+    }, {
+      "album_type" : "single",
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/7n2Ycct7Beij7Dj7meI4X0"
+        },
+        "href" : "https://api.spotify.com/v1/artists/7n2Ycct7Beij7Dj7meI4X0",
+        "id" : "7n2Ycct7Beij7Dj7meI4X0",
+        "name" : "TWICE",
+        "type" : "artist",
+        "uri" : "spotify:artist:7n2Ycct7Beij7Dj7meI4X0"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IL", "IS", "IT", "JP", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SK", "SV", "TH", "TR", "TW", "US", "UY", "VN", "ZA" ],
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/album/20tQIMCWsH5GjJUlSX5tBb"
+      },
+      "href" : "https://api.spotify.com/v1/albums/20tQIMCWsH5GjJUlSX5tBb",
+      "id" : "20tQIMCWsH5GjJUlSX5tBb",
+      "images" : [ {
+        "height" : 632,
+        "url" : "https://i.scdn.co/image/3c3039d6c443b2945f39fda304bd9f81881d4c0c",
+        "width" : 640
+      }, {
+        "height" : 296,
+        "url" : "https://i.scdn.co/image/3fd2a50ee2b1c5115f8dc9d3c9b4d48444942d5d",
+        "width" : 300
+      }, {
+        "height" : 63,
+        "url" : "https://i.scdn.co/image/8bafdffe551fed0f7330a17dc06aabf840629588",
+        "width" : 64
+      } ],
+      "name" : "One More Time",
+      "release_date" : "2017-10-18",
+      "release_date_precision" : "day",
+      "type" : "album",
+      "uri" : "spotify:album:20tQIMCWsH5GjJUlSX5tBb"
+    } ],
+    "limit" : 20,
+    "next" : "https://api.spotify.com/v1/search?query=TWICE&type=album&offset=20&limit=20",
+    "offset" : 0,
+    "previous" : null,
+    "total" : 1029
+  }
+}

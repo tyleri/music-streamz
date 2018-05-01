@@ -1,0 +1,523 @@
+{
+  "artists" : {
+    "href" : "https://api.spotify.com/v1/search?query=TWICE&type=artist&offset=0&limit=20",
+    "items" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/7n2Ycct7Beij7Dj7meI4X0"
+      },
+      "followers" : {
+        "href" : null,
+        "total" : 1117269
+      },
+      "genres" : [ "dance pop", "k-pop" ],
+      "href" : "https://api.spotify.com/v1/artists/7n2Ycct7Beij7Dj7meI4X0",
+      "id" : "7n2Ycct7Beij7Dj7meI4X0",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://i.scdn.co/image/9da1b39a4cd6d927a26b1b33238c728459a2bbf6",
+        "width" : 640
+      }, {
+        "height" : 320,
+        "url" : "https://i.scdn.co/image/62b004657bd50ef638786fc51a222f4c5bcd0680",
+        "width" : 320
+      }, {
+        "height" : 160,
+        "url" : "https://i.scdn.co/image/b239c26351a78f8bfa0dbf9b346a4cd9f45e6cc8",
+        "width" : 160
+      } ],
+      "name" : "TWICE",
+      "popularity" : 75,
+      "type" : "artist",
+      "uri" : "spotify:artist:7n2Ycct7Beij7Dj7meI4X0"
+    }, {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/2yp6zqk49KOKKrOSSsUb75"
+      },
+      "followers" : {
+        "href" : null,
+        "total" : 45266
+      },
+      "genres" : [ "peruvian indie", "rock cristiano" ],
+      "href" : "https://api.spotify.com/v1/artists/2yp6zqk49KOKKrOSSsUb75",
+      "id" : "2yp6zqk49KOKKrOSSsUb75",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://i.scdn.co/image/afcf6b0aea70dea861b1431395b578d3af9e9654",
+        "width" : 640
+      }, {
+        "height" : 320,
+        "url" : "https://i.scdn.co/image/9b97406e07999f302668e0d3e4990c9a166b234a",
+        "width" : 320
+      }, {
+        "height" : 160,
+        "url" : "https://i.scdn.co/image/c909f431fa37afe75efb47e644c86fb1f00461e3",
+        "width" : 160
+      } ],
+      "name" : "TWICE",
+      "popularity" : 51,
+      "type" : "artist",
+      "uri" : "spotify:artist:2yp6zqk49KOKKrOSSsUb75"
+    }, {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/53iwbM5wGXyHLD1swSwFF9"
+      },
+      "followers" : {
+        "href" : null,
+        "total" : 550
+      },
+      "genres" : [ ],
+      "href" : "https://api.spotify.com/v1/artists/53iwbM5wGXyHLD1swSwFF9",
+      "id" : "53iwbM5wGXyHLD1swSwFF9",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://i.scdn.co/image/3b23b95aae50d2b97d1d6ccd7ec6eab7c464b4ae",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/fba206b7dac9df0e5ca613e871d4922550ae0fba",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/77e052e4cf73fe5c6ad39cf89933164f1440abbc",
+        "width" : 64
+      } ],
+      "name" : "Twice",
+      "popularity" : 28,
+      "type" : "artist",
+      "uri" : "spotify:artist:53iwbM5wGXyHLD1swSwFF9"
+    }, {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/5aE9blE8ACdf6BXOnIKc8k"
+      },
+      "followers" : {
+        "href" : null,
+        "total" : 31
+      },
+      "genres" : [ ],
+      "href" : "https://api.spotify.com/v1/artists/5aE9blE8ACdf6BXOnIKc8k",
+      "id" : "5aE9blE8ACdf6BXOnIKc8k",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://i.scdn.co/image/97ecb67516f6150dad8e916dff921a874053f79b",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/dfecbec8ef8443eab396d8b4e88bf166e8890ae0",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/54fb452adbaaa12ad119ff6741c7fdcc5567472b",
+        "width" : 64
+      } ],
+      "name" : "Twice Thou",
+      "popularity" : 17,
+      "type" : "artist",
+      "uri" : "spotify:artist:5aE9blE8ACdf6BXOnIKc8k"
+    }, {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/1ykE1f6sjINtkrkJhVp8in"
+      },
+      "followers" : {
+        "href" : null,
+        "total" : 70
+      },
+      "genres" : [ ],
+      "href" : "https://api.spotify.com/v1/artists/1ykE1f6sjINtkrkJhVp8in",
+      "id" : "1ykE1f6sjINtkrkJhVp8in",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://i.scdn.co/image/f9906a96c98adc3ab79d199879684092d558d5e7",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/d5fe0bc14ff87bbb743e4750cec2970cdc7216f7",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/d9d78f7aecb289621ee4d3532cc811da15f2c56a",
+        "width" : 64
+      } ],
+      "name" : "Twice",
+      "popularity" : 18,
+      "type" : "artist",
+      "uri" : "spotify:artist:1ykE1f6sjINtkrkJhVp8in"
+    }, {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3pthbcw421plaJoQeGMrjr"
+      },
+      "followers" : {
+        "href" : null,
+        "total" : 1182
+      },
+      "genres" : [ "bubblegum dance" ],
+      "href" : "https://api.spotify.com/v1/artists/3pthbcw421plaJoQeGMrjr",
+      "id" : "3pthbcw421plaJoQeGMrjr",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://i.scdn.co/image/deeb86d359e07ee10f90ad9bf697f918447565cf",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/3004e8936b4fe694e81200edf63331a6234b56e7",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/76d596e07be14ece8b7fb1a5f84e23802667d09a",
+        "width" : 64
+      } ],
+      "name" : "Lucky Twice",
+      "popularity" : 24,
+      "type" : "artist",
+      "uri" : "spotify:artist:3pthbcw421plaJoQeGMrjr"
+    }, {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/2FWB8vBXrgxv6wGO1rJvPb"
+      },
+      "followers" : {
+        "href" : null,
+        "total" : 60
+      },
+      "genres" : [ ],
+      "href" : "https://api.spotify.com/v1/artists/2FWB8vBXrgxv6wGO1rJvPb",
+      "id" : "2FWB8vBXrgxv6wGO1rJvPb",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://i.scdn.co/image/908abf1c6ba4176358f4ace83510d0fb6e86c5aa",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/350bb10c99fa31476413c1f63231262089ddcd3d",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/6a5c931fad2ea974c455830be85701d971692e8f",
+        "width" : 64
+      } ],
+      "name" : "T.W.I.C.E.",
+      "popularity" : 0,
+      "type" : "artist",
+      "uri" : "spotify:artist:2FWB8vBXrgxv6wGO1rJvPb"
+    }, {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/5iFdI8nauSQ7A4tFmJXJCv"
+      },
+      "followers" : {
+        "href" : null,
+        "total" : 19
+      },
+      "genres" : [ ],
+      "href" : "https://api.spotify.com/v1/artists/5iFdI8nauSQ7A4tFmJXJCv",
+      "id" : "5iFdI8nauSQ7A4tFmJXJCv",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://i.scdn.co/image/78e1c0c7aa9003191c93c9b11d34442dfbae89bf",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/3b246e0adc2e116d75bcd13a8bf70769d9a37cc4",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/6287a891352a1559884618c348da1f7d99204245",
+        "width" : 64
+      } ],
+      "name" : "T.W.I.C.E",
+      "popularity" : 0,
+      "type" : "artist",
+      "uri" : "spotify:artist:5iFdI8nauSQ7A4tFmJXJCv"
+    }, {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/0kVormSDu1kewOzCsjRQE7"
+      },
+      "followers" : {
+        "href" : null,
+        "total" : 7
+      },
+      "genres" : [ ],
+      "href" : "https://api.spotify.com/v1/artists/0kVormSDu1kewOzCsjRQE7",
+      "id" : "0kVormSDu1kewOzCsjRQE7",
+      "images" : [ {
+        "height" : 600,
+        "url" : "https://i.scdn.co/image/dc6c532a3ada178fdac57ea376a1df9609509d67",
+        "width" : 600
+      }, {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/cebef6ee2269735703526b9d1b7274791f497838",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/97f2ca3bf772745b76df762ac4ab00848cada18c",
+        "width" : 64
+      } ],
+      "name" : "Twice",
+      "popularity" : 0,
+      "type" : "artist",
+      "uri" : "spotify:artist:0kVormSDu1kewOzCsjRQE7"
+    }, {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/4g6l0x7W0ae84knNhPKAKr"
+      },
+      "followers" : {
+        "href" : null,
+        "total" : 21
+      },
+      "genres" : [ ],
+      "href" : "https://api.spotify.com/v1/artists/4g6l0x7W0ae84knNhPKAKr",
+      "id" : "4g6l0x7W0ae84knNhPKAKr",
+      "images" : [ ],
+      "name" : "Twice",
+      "popularity" : 2,
+      "type" : "artist",
+      "uri" : "spotify:artist:4g6l0x7W0ae84knNhPKAKr"
+    }, {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3OinEWyxgesnIVsEKFdG5O"
+      },
+      "followers" : {
+        "href" : null,
+        "total" : 64
+      },
+      "genres" : [ ],
+      "href" : "https://api.spotify.com/v1/artists/3OinEWyxgesnIVsEKFdG5O",
+      "id" : "3OinEWyxgesnIVsEKFdG5O",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://i.scdn.co/image/cce4f5ddac04a52eb741bfe3c30d2187d728a352",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/f242dca14d2daa0bf4718f5cfe73271671d34dc9",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/576cbc1ff3327f9f1bd021c07e81cd1c03dd6e2e",
+        "width" : 64
+      } ],
+      "name" : "Twice",
+      "popularity" : 0,
+      "type" : "artist",
+      "uri" : "spotify:artist:3OinEWyxgesnIVsEKFdG5O"
+    }, {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6HWiyY8PNx47af6XmM5PDM"
+      },
+      "followers" : {
+        "href" : null,
+        "total" : 13
+      },
+      "genres" : [ ],
+      "href" : "https://api.spotify.com/v1/artists/6HWiyY8PNx47af6XmM5PDM",
+      "id" : "6HWiyY8PNx47af6XmM5PDM",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://i.scdn.co/image/76c70b592c84fca3edfc379a04f9b6358457e418",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/233fa67c1916523b3cfb9b7a3e38e03a09e95099",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/f5c91d2281c67dda9f7fb277cd035f1d83c5da0a",
+        "width" : 64
+      } ],
+      "name" : "Twice",
+      "popularity" : 0,
+      "type" : "artist",
+      "uri" : "spotify:artist:6HWiyY8PNx47af6XmM5PDM"
+    }, {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/4BMr1okVP0MWaVJi6kkV3B"
+      },
+      "followers" : {
+        "href" : null,
+        "total" : 0
+      },
+      "genres" : [ ],
+      "href" : "https://api.spotify.com/v1/artists/4BMr1okVP0MWaVJi6kkV3B",
+      "id" : "4BMr1okVP0MWaVJi6kkV3B",
+      "images" : [ ],
+      "name" : "Twice",
+      "popularity" : 0,
+      "type" : "artist",
+      "uri" : "spotify:artist:4BMr1okVP0MWaVJi6kkV3B"
+    }, {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/1CKuDEvs24ETGjLezkuSyg"
+      },
+      "followers" : {
+        "href" : null,
+        "total" : 0
+      },
+      "genres" : [ ],
+      "href" : "https://api.spotify.com/v1/artists/1CKuDEvs24ETGjLezkuSyg",
+      "id" : "1CKuDEvs24ETGjLezkuSyg",
+      "images" : [ ],
+      "name" : "TWICE",
+      "popularity" : 0,
+      "type" : "artist",
+      "uri" : "spotify:artist:1CKuDEvs24ETGjLezkuSyg"
+    }, {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/0pOs1Xjtvd2tgtzKH1UNuP"
+      },
+      "followers" : {
+        "href" : null,
+        "total" : 17
+      },
+      "genres" : [ ],
+      "href" : "https://api.spotify.com/v1/artists/0pOs1Xjtvd2tgtzKH1UNuP",
+      "id" : "0pOs1Xjtvd2tgtzKH1UNuP",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://i.scdn.co/image/7153c12e178f6c622ece7e146bfe376d0c84fe51",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/9134731c73a01fe3b11befce2aa636f7f6d23f99",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/376f6da488ec1aa484d7070f5b770f5b51cf43a0",
+        "width" : 64
+      } ],
+      "name" : "Twice",
+      "popularity" : 1,
+      "type" : "artist",
+      "uri" : "spotify:artist:0pOs1Xjtvd2tgtzKH1UNuP"
+    }, {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6UvZmoie3LdVa5TNi939Fd"
+      },
+      "followers" : {
+        "href" : null,
+        "total" : 370
+      },
+      "genres" : [ ],
+      "href" : "https://api.spotify.com/v1/artists/6UvZmoie3LdVa5TNi939Fd",
+      "id" : "6UvZmoie3LdVa5TNi939Fd",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://i.scdn.co/image/58b04e50db7cc1b4dc1d9e2d92302a583e4bba53",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/955b6c4aa2295aec3890e1691d4d8142c7f9adea",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/8cea5e084313ddfe1c0b1a8ef4c4693108307eba",
+        "width" : 64
+      } ],
+      "name" : "Think Twice with David Ryshpan",
+      "popularity" : 21,
+      "type" : "artist",
+      "uri" : "spotify:artist:6UvZmoie3LdVa5TNi939Fd"
+    }, {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3zt8RFu7F6unp9hEG2EzOc"
+      },
+      "followers" : {
+        "href" : null,
+        "total" : 1046
+      },
+      "genres" : [ "electro swing" ],
+      "href" : "https://api.spotify.com/v1/artists/3zt8RFu7F6unp9hEG2EzOc",
+      "id" : "3zt8RFu7F6unp9hEG2EzOc",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://i.scdn.co/image/d18967f39b43632690c2f0ba46fc85c78fbe8cc8",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/68c4c3ce6224fa4b12de73212ace88bf237819c7",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/51afea8a9ac3b273d7e25d87cb604e13695c4302",
+        "width" : 64
+      } ],
+      "name" : "Think Twice",
+      "popularity" : 15,
+      "type" : "artist",
+      "uri" : "spotify:artist:3zt8RFu7F6unp9hEG2EzOc"
+    }, {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/4Ptte3Co29nu4q1aqlLu6p"
+      },
+      "followers" : {
+        "href" : null,
+        "total" : 1124
+      },
+      "genres" : [ ],
+      "href" : "https://api.spotify.com/v1/artists/4Ptte3Co29nu4q1aqlLu6p",
+      "id" : "4Ptte3Co29nu4q1aqlLu6p",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://i.scdn.co/image/020928930218fbc4f5a58a0294da23c07c0bd914",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/ec7fe13f70a87727859dbf887456cba4787c13be",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/a6c5c12db622866404919fe4607a12227242b8af",
+        "width" : 64
+      } ],
+      "name" : "Twin n Twice",
+      "popularity" : 33,
+      "type" : "artist",
+      "uri" : "spotify:artist:4Ptte3Co29nu4q1aqlLu6p"
+    }, {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/28pbppp0KwbHeYJ5txJONu"
+      },
+      "followers" : {
+        "href" : null,
+        "total" : 10
+      },
+      "genres" : [ ],
+      "href" : "https://api.spotify.com/v1/artists/28pbppp0KwbHeYJ5txJONu",
+      "id" : "28pbppp0KwbHeYJ5txJONu",
+      "images" : [ ],
+      "name" : "Twice Blind",
+      "popularity" : 13,
+      "type" : "artist",
+      "uri" : "spotify:artist:28pbppp0KwbHeYJ5txJONu"
+    }, {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6sDJnRY60nGwPafQjl288W"
+      },
+      "followers" : {
+        "href" : null,
+        "total" : 22
+      },
+      "genres" : [ ],
+      "href" : "https://api.spotify.com/v1/artists/6sDJnRY60nGwPafQjl288W",
+      "id" : "6sDJnRY60nGwPafQjl288W",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://i.scdn.co/image/e8fb0fea536edf3e5d51e10b86b167ad93c85682",
+        "width" : 640
+      }, {
+        "height" : 320,
+        "url" : "https://i.scdn.co/image/f651cb2c64c5a83176fcd5db76259f25ec9235f5",
+        "width" : 320
+      }, {
+        "height" : 160,
+        "url" : "https://i.scdn.co/image/e7ce5b6f64795d96b19f0eb3979e8cbbf39785c5",
+        "width" : 160
+      } ],
+      "name" : "Yomi Twice",
+      "popularity" : 14,
+      "type" : "artist",
+      "uri" : "spotify:artist:6sDJnRY60nGwPafQjl288W"
+    } ],
+    "limit" : 20,
+    "next" : "https://api.spotify.com/v1/search?query=TWICE&type=artist&offset=20&limit=20",
+    "offset" : 0,
+    "previous" : null,
+    "total" : 171
+  }
+}
