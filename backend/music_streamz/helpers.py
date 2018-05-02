@@ -4,6 +4,7 @@ import os
 from music_streamz import Db as db
 
 QUERY_TYPES = ['track', 'album', 'artist']
+RESULTS_PER_PAGE = 20
 
 def query_db_or_online(q, q_type, page):
   """
@@ -12,7 +13,7 @@ def query_db_or_online(q, q_type, page):
 
   q (string)
   q_type (string): must be one of ['track', 'album', 'artist']
-  page (int)
+  page (int): must be >= 1
 
   return (list of dicts)
   """
@@ -55,9 +56,15 @@ def query_spotify(q, q_type, page):
 
   # then get search results
   url = 'https://api.spotify.com/v1/search?q=' + q + '&type=' + q_type
+  params = {
+    'q': q,
+    'type': q_type,
+    'limit': RESULTS_PER_PAGE,
+    'offset': (page - 1) * RESULTS_PER_PAGE
+  }
   headers = {"Authorization": "Bearer " + access_token}
 
-  r = requests.get(url, headers=headers)
+  r = requests.get(url, params=params, headers=headers)
   if r.status_code != 200:
     raise ValueError('Error querying Spotify')
 
