@@ -8,39 +8,50 @@ import requests
 import base64
 import os
 
-@app.route('/', methods=['GET'])
-def index():
-  return jsonify({ 'hello': 'world' })
+
+# @app.route('/', methods=['GET'])
+# def index():
+#   return jsonify({'hello': 'world'})
+
 
 @app.route('/search', methods=['GET'])
 def search():
-    q = request.args.get('q')
-    q_type = request.args.get('type')
-    page = request.args.get('page')
+  q = request.args.get('q')
+  q_type = request.args.get('type')
+  page = request.args.get('page')
 
-    if q is None:
-        abort(400)
+  if q is None:
+    abort(400)
 
-    if q_type not in QUERY_TYPES:
-        abort(400)
+  if q_type not in QUERY_TYPES:
+    abort(400)
 
-    if page is None:
-        page = 1
-    elif page.isdigit():
-        page = int(page)
-    else:
-        abort(400)
+  if page is None:
+    page = 1
+  elif page.isdigit():
+    page = int(page)
+  else:
+    abort(400)
 
-    query_name = q.replace(' ', '+')
+  query_name = q.replace(' ', '+')
 
+  query_result = query_db_or_online(q, q_type, page)
 
-    results_dict = {}
-
-    for QT in QUERY_TYPES:
-        if q_type == QT or q_type is None:
-            query_result = query_db_or_online(q, QT, page)
-            results_dict[QT + 's'] = query_result
-
-    return jsonify(results_dict)
+  return jsonify(query_result)
 
 
+@app.route('/recommendation', methods=['POST'])
+def recommend():
+  list_picked_songs = request.get_json()
+
+  # validate
+  if type(list_picked_songs) is not list:
+    abort(400)
+  
+  for d in list_picked_songs:
+    if 'song_name' not in d or 'artist_name' not in d:
+      abort(400)
+
+  recs = get_recommendations(list_picked_songs)
+
+  return jsonify(recs)

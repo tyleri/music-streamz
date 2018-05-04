@@ -220,7 +220,17 @@ def query_applemusic(q, q_type, page):
 
   return mod_results
 
-def get_recommendations(list_picked_ids):
+def get_recommendations(list_picked_songs):
+  """
+  list_picked_songs: list of {'song_name': SONG_NAME, 'artist_name': ARTIST_NAME}
+  """
+
+  list_picked_ids = []
+
+  for song in list_picked_songs:
+    query_result = db.query_songs_table(song['song_name'], song['artist_name'])
+    list_picked_ids.append(query_result['spotify_id'])
+
   access_token = get_spotify_token()
 
   url = 'https://api.spotify.com/v1/recommendations'
@@ -250,8 +260,8 @@ def get_recommendations(list_picked_ids):
       for track in results
   ]
 
-for song in recs:
-  db.insert_songs_table(song['song_name'], song['artist_name'], spotify_id=song['spotify_id'])
+  for song in recs:
+    db.insert_songs_table(song['song_name'], song['artist_name'], spotify_id=song['spotify_id'])
 
-return recs
+  return recs
 

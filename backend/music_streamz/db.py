@@ -92,11 +92,9 @@ class DB(object):
 
   def query_songs_table(self, name, artist):
     """
-    Returns a list of dictionaries (search results) for the given
-    query, query type, and page number.
+    Returns the Spotify id and Apple Music id for the given song.
 
-    Returns None if the specified combination of query, query type,
-    and page number are not in the DB.
+    Returns None if the specified song is not in the DB.
     """
 
     cursor = self.conn.execute(
