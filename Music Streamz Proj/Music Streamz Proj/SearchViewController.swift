@@ -79,24 +79,13 @@ class SearchViewController: UITableViewController, UISearchResultsUpdating, UISe
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String)
-    {
-        timer?.invalidate()
-        timer = Timer.scheduledTimer(timeInterval: 0.25, target: self, selector: #selector(searchTracks(_:)), userInfo: ["searchText": searchText], repeats: false)
-    }
-    
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return cellHeight
     }
     
     func updateSearchResults(for searchController: UISearchController) {
-        if let searchText = searchController.searchBar.text
-        {
-            if !searchText.isEmpty
-            {
-                
-            }
-        }
+        timer?.invalidate()
+        timer = Timer.scheduledTimer(timeInterval: 0.25, target: self, selector: #selector(searchTracks(_:)), userInfo: ["searchText": searchController.searchBar.text], repeats: false)
     }
     
     @objc func searchTracks(_ timer: Timer)
