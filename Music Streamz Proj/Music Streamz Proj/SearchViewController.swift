@@ -14,7 +14,10 @@ class SearchViewController: UITableViewController, UISearchResultsUpdating, UISe
     
     var searchController: UISearchController!
     var timer: Timer?
+    var songsList: [Song] = []
+    
     let songCellIndentifier = "SongCell"
+    let cellHeight: CGFloat = 100
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +33,7 @@ class SearchViewController: UITableViewController, UISearchResultsUpdating, UISe
         searchController.searchBar.sizeToFit()
         
         tableView.tableHeaderView = searchController.searchBar
+        tableView.register(SongTableViewCell.self, forCellReuseIdentifier: songCellIndentifier)
         
         definesPresentationContext = true
         
@@ -41,12 +45,32 @@ class SearchViewController: UITableViewController, UISearchResultsUpdating, UISe
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10 // not sure if I need to include the songs (haven't implemented the API yet)
+        return songsList.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: songCellIndentifier) ??
-            UITableViewCell(style: .subtitle, reuseIdentifier: songCellIndentifier)
+        let cell = tableView.dequeueReusableCell(withIdentifier: songCellIndentifier) as! SongTableViewCell
+        let currSong = songsList[indexPath.row]
+        
+        cell.songNameLabel.text = currSong.name
+        cell.artistNameLabel.text = currSong.artist
+        cell.albumNameLabel.text = currSong.album
+        
+        if let url = NSURL(string: currSong.imageUrl), let data = NSData(contentsOf: url as URL) {
+            let urlImage = UIImage(data: data as Data)!
+            let ratio = cellHeight / (urlImage.size.height)
+            let newSize = CGSize(width: urlImage.size.width * ratio, height: urlImage.size.height * ratio)
+            let renderFormat = UIGraphicsImageRendererFormat.default()
+            renderFormat.opaque = false
+            let renderer = UIGraphicsImageRenderer(size: newSize, format: renderFormat)
+            let newImage = renderer.image {
+                (context) in urlImage.draw(in: CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height))
+            }
+            
+            cell.albumImageView.image = newImage
+        }
+        
+        cell.setNeedsUpdateConstraints()
         
         return cell
     }
@@ -59,6 +83,10 @@ class SearchViewController: UITableViewController, UISearchResultsUpdating, UISe
     {
         timer?.invalidate()
         timer = Timer.scheduledTimer(timeInterval: 0.25, target: self, selector: #selector(searchTracks(_:)), userInfo: ["searchText": searchText], repeats: false)
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return cellHeight
     }
     
     func updateSearchResults(for searchController: UISearchController) {
@@ -80,10 +108,15 @@ class SearchViewController: UITableViewController, UISearchResultsUpdating, UISe
                 return
         }
         
-        //        Network.searchTracks(withQuery: searchText)
-        //        {
-        //
-        //        }
+        if searchText == "" {
+            self.songsList = []
+            self.tableView.reloadData()
+        } else {
+            Network.searchSongs(query: searchText, { (songsList) in
+                self.songsList = songsList
+                self.tableView.reloadData()
+            })
+        }
     }
     
 }

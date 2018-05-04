@@ -6,6 +6,8 @@ target 'Music Streamz Proj' do
   use_frameworks!
 
   # Pods for Music Streamz Proj
+  pod 'Alamofire'
+  pod 'SwiftyJSON'
 
   target 'Music Streamz ProjTests' do
     inherit! :search_paths

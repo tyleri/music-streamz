@@ -24,6 +24,8 @@
 		75512DD4209BC9F200CAA998 /* Abel-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75512DD3209BC9F200CAA998 /* Abel-Regular.ttf */; };
 		75512DDA209BCF9700CAA998 /* Luna.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75512DD9209BCF9700CAA998 /* Luna.ttf */; };
 		A77D97B4E4C9BEF3F18E1D5D /* Pods_Music_Streamz_Proj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DC28399ACF1A9F92CB4D11B /* Pods_Music_Streamz_Proj.framework */; };
+		BA9AFC47209CFB0600340659 /* SongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9AFC46209CFB0600340659 /* SongTableViewCell.swift */; };
+		BA9AFC49209CFC4E00340659 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9AFC48209CFC4E00340659 /* Network.swift */; };
 		CC42F4D3ED095E9AA2823FCD /* Pods_Music_Streamz_ProjTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 757C7AA1891869590902FEA7 /* Pods_Music_Streamz_ProjTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +75,8 @@
 		7CD0237A2990A82CF4FE0F46 /* Pods-Music Streamz Proj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Music Streamz Proj.release.xcconfig"; path = "Pods/Target Support Files/Pods-Music Streamz Proj/Pods-Music Streamz Proj.release.xcconfig"; sourceTree = "<group>"; };
 		B1DA51E1BEAAFF0A5AFC54EF /* Pods-Music Streamz ProjTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Music Streamz ProjTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Music Streamz ProjTests/Pods-Music Streamz ProjTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B7E08B0F51B025CAB806E9F5 /* Pods-Music Streamz Proj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Music Streamz Proj.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Music Streamz Proj/Pods-Music Streamz Proj.debug.xcconfig"; sourceTree = "<group>"; };
+		BA9AFC46209CFB0600340659 /* SongTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
+		BA9AFC48209CFC4E00340659 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		D8191D8777837243DD9EA9EB /* Pods-Music Streamz ProjUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Music Streamz ProjUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Music Streamz ProjUITests/Pods-Music Streamz ProjUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FD17CB615931D35136916DE5 /* Pods_Music_Streamz_ProjUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Music_Streamz_ProjUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -149,7 +153,9 @@
 				75512DC7209BC57200CAA998 /* Handlee-Regular.ttf */,
 				751FC6EA20993E5A009BEF63 /* AppDelegate.swift */,
 				751FC6EC20993E5A009BEF63 /* ViewController.swift */,
+				BA9AFC46209CFB0600340659 /* SongTableViewCell.swift */,
 				754C61FA209C008F0090BBF7 /* SearchViewController.swift */,
+				BA9AFC48209CFC4E00340659 /* Network.swift */,
 				751FC72220994051009BEF63 /* CartViewController.swift */,
 				751FC7202099402E009BEF63 /* CartTableViewCell.swift */,
 				751FC71E20993FC6009BEF63 /* PlaylistCollectionViewCell.swift */,
@@ -200,6 +206,7 @@
 				751FC6E320993E5A009BEF63 /* Sources */,
 				751FC6E420993E5A009BEF63 /* Frameworks */,
 				751FC6E520993E5A009BEF63 /* Resources */,
+				67E7FD2A9A33874293370EBA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -343,6 +350,26 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		67E7FD2A9A33874293370EBA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Music Streamz Proj/Pods-Music Streamz Proj-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Music Streamz Proj/Pods-Music Streamz Proj-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		96CD488F39FB4A55FF9AE772 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -390,6 +417,8 @@
 				754C61FB209C008F0090BBF7 /* SearchViewController.swift in Sources */,
 				751FC6ED20993E5A009BEF63 /* ViewController.swift in Sources */,
 				751FC71F20993FC6009BEF63 /* PlaylistCollectionViewCell.swift in Sources */,
+				BA9AFC47209CFB0600340659 /* SongTableViewCell.swift in Sources */,
+				BA9AFC49209CFC4E00340659 /* Network.swift in Sources */,
 				751FC72320994051009BEF63 /* CartViewController.swift in Sources */,
 				751FC6EB20993E5A009BEF63 /* AppDelegate.swift in Sources */,
 				751FC7212099402E009BEF63 /* CartTableViewCell.swift in Sources */,
