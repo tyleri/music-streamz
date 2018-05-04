@@ -172,7 +172,7 @@ def query_applemusic(q, q_type, page):
 
   token = os.environ['APPLEMUSIC_TOKEN']
 
-  url = "https://api.music.apple.com/v1/catalog/us/search"
+  url = 'https://api.music.apple.com/v1/catalog/us/search'
   params = {
     'term': q,
     'types': type_mapping[q_type],
@@ -220,8 +220,38 @@ def query_applemusic(q, q_type, page):
 
   return mod_results
 
-  def get_recommendations(list_picked):
-    access_token = get_spotify_token()
+def get_recommendations(list_picked_ids):
+  access_token = get_spotify_token()
 
+  url = 'https://api.spotify.com/v1/recommendations'
+  params = {
+    'limit': RESULTS_PER_PAGE,
+    'market': 'US',
+    'seed_tracks': ','.join(list_picked_ids)
+  }
+  headers = {"Authorization": "Bearer " + access_token}
 
+  r = requests.get(url, params=params, headers=headers)
+  if r.status_code != 200:
+    raise ValueError('Error querying Spotify')
+
+  results = r.json()['tracks']
+
+  recs = [
+      {
+        'spotify_id': track['id'],
+        'applemusic_id': '',
+        'song_name': track['name'],
+        'artist_name': track['artists'][0]['name'],
+        'album_name': track['album']['name'],
+        'album_image': track['album']['images'][1]['url'],
+        'preview_url': track['preview_url'] if track['preview_url'] else ''
+      }
+      for track in results
+  ]
+
+for song in recs:
+  db.insert_songs_table(song['song_name'], song['artist_name'], spotify_id=song['spotify_id'])
+
+return recs
 
