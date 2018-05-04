@@ -22,12 +22,14 @@ def search():
         abort(400)
 
     if q_type not in QUERY_TYPES:
-        q_type = None
+        abort(400)
 
-    if page is None or not page.isdigit():
+    if page is None:
         page = 1
-    else:
+    elif page.isdigit():
         page = int(page)
+    else:
+        abort(400)
 
     query_name = q.replace(' ', '+')
 

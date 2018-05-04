@@ -16,6 +16,7 @@ class DB(object):
   def __init__(self):
     self.conn = sqlite3.connect("music_streamz.db", check_same_thread=False)
     self.create_searches_table()
+    self.create_songs_table()
 
   def create_searches_table(self):
     try:
@@ -72,6 +73,77 @@ class DB(object):
     )
     self.conn.commit()
 
+  def create_songs_table(self):
+    try:
+      self.conn.execute("""
+        CREATE TABLE songs (
+            name TEXT NOT NULL,
+            artist TEXT NOT NULL,
+            spotify_id TEXT NOT NULL,
+            applemusic_id TEXT NOT NULL
+        );
+      """)
+    except Exception as e: print e
+
+
+  # def delete_task_table(self):
+  #   # TODO - Implement this to delete a task table
+  #   pass
+
+  def query_songs_table(self, name, artist):
+    """
+    Returns a list of dictionaries (search results) for the given
+    query, query type, and page number.
+
+    Returns None if the specified combination of query, query type,
+    and page number are not in the DB.
+    """
+
+    cursor = self.conn.execute(
+        """
+          SELECT spotify_id, applemusic_id FROM songs
+          WHERE name = ? AND artist = ?;
+        """,
+        (name, artist)
+    )
+
+    query_result = cursor.fetchone()
+    if not query_result:
+      return None
+    else:
+      return { "spotify_id": query_result[0], "applemusic_id": query_result[1] }
+
+  def insert_songs_table(self, name, artist, spotify_id='', applemusic_id=''):
+    """
+    Inserts the spotify_id and/or applemusic_id into the DB for the given song
+    if it doesn't already have that info.
+    """
+
+    query_result = self.query_songs_table(name, artist)
+
+    if not query_result:
+      self.conn.execute(
+        """
+          INSERT INTO songs (name, artist, spotify_id, applemusic_id)
+          VALUES (?, ?, ?, ?);
+        """,
+        (name, artist, spotify_id, applemusic_id)
+      )
+    else:
+      if spotify_id == '':
+        spotify_id = query_result['spotify_id']
+      if applemusic_id == '':
+        applemusic_id = query_result['applemusic_id']
+      
+      self.conn.execute(
+        """
+          UPDATE songs SET spotify_id = ?, applemusic_id = ?
+          WHERE name = ? AND artist = ?;
+        """,
+        (spotify_id, applemusic_id, name, artist)
+      )
+
+    self.conn.commit()
 
   def example_create_table(self):
     """
