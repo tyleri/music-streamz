@@ -1,0 +1,20 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Music Streamz Proj' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Music Streamz Proj
+
+  target 'Music Streamz ProjTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'Music Streamz ProjUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

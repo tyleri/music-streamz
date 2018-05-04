@@ -1,0 +1,687 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		63B82322039A7E8227DF7EEF /* Pods_Music_Streamz_ProjUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD17CB615931D35136916DE5 /* Pods_Music_Streamz_ProjUITests.framework */; };
+		751FC6EB20993E5A009BEF63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751FC6EA20993E5A009BEF63 /* AppDelegate.swift */; };
+		751FC6ED20993E5A009BEF63 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751FC6EC20993E5A009BEF63 /* ViewController.swift */; };
+		751FC6F220993E5A009BEF63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 751FC6F120993E5A009BEF63 /* Assets.xcassets */; };
+		751FC6F520993E5A009BEF63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 751FC6F320993E5A009BEF63 /* LaunchScreen.storyboard */; };
+		751FC70020993E5A009BEF63 /* Music_Streamz_ProjTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751FC6FF20993E5A009BEF63 /* Music_Streamz_ProjTests.swift */; };
+		751FC70B20993E5A009BEF63 /* Music_Streamz_ProjUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751FC70A20993E5A009BEF63 /* Music_Streamz_ProjUITests.swift */; };
+		751FC71F20993FC6009BEF63 /* PlaylistCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751FC71E20993FC6009BEF63 /* PlaylistCollectionViewCell.swift */; };
+		751FC7212099402E009BEF63 /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751FC7202099402E009BEF63 /* CartTableViewCell.swift */; };
+		751FC72320994051009BEF63 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751FC72220994051009BEF63 /* CartViewController.swift */; };
+		751FC7252099407A009BEF63 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751FC7242099407A009BEF63 /* Song.swift */; };
+		754C61FB209C008F0090BBF7 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C61FA209C008F0090BBF7 /* SearchViewController.swift */; };
+		75512DC8209BC57200CAA998 /* Handlee-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75512DC7209BC57200CAA998 /* Handlee-Regular.ttf */; };
+		75512DCC209BC6B000CAA998 /* BreeSerif-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75512DCB209BC6B000CAA998 /* BreeSerif-Regular.ttf */; };
+		75512DD4209BC9F200CAA998 /* Abel-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75512DD3209BC9F200CAA998 /* Abel-Regular.ttf */; };
+		75512DDA209BCF9700CAA998 /* Luna.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75512DD9209BCF9700CAA998 /* Luna.ttf */; };
+		A77D97B4E4C9BEF3F18E1D5D /* Pods_Music_Streamz_Proj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DC28399ACF1A9F92CB4D11B /* Pods_Music_Streamz_Proj.framework */; };
+		CC42F4D3ED095E9AA2823FCD /* Pods_Music_Streamz_ProjTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 757C7AA1891869590902FEA7 /* Pods_Music_Streamz_ProjTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		751FC6FC20993E5A009BEF63 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 751FC6DF20993E59009BEF63 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 751FC6E620993E5A009BEF63;
+			remoteInfo = "Music Streamz Proj";
+		};
+		751FC70720993E5A009BEF63 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 751FC6DF20993E59009BEF63 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 751FC6E620993E5A009BEF63;
+			remoteInfo = "Music Streamz Proj";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4977D6BD62A9CE8B6CFDE17E /* Pods-Music Streamz ProjUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Music Streamz ProjUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Music Streamz ProjUITests/Pods-Music Streamz ProjUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4DC28399ACF1A9F92CB4D11B /* Pods_Music_Streamz_Proj.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Music_Streamz_Proj.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		58E8E1B4E677444ABAE8A701 /* Pods-Music Streamz ProjTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Music Streamz ProjTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Music Streamz ProjTests/Pods-Music Streamz ProjTests.release.xcconfig"; sourceTree = "<group>"; };
+		751FC6E720993E5A009BEF63 /* Music Streamz Proj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Music Streamz Proj.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		751FC6EA20993E5A009BEF63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		751FC6EC20993E5A009BEF63 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		751FC6F120993E5A009BEF63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		751FC6F420993E5A009BEF63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		751FC6F620993E5A009BEF63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		751FC6FB20993E5A009BEF63 /* Music Streamz ProjTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Music Streamz ProjTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		751FC6FF20993E5A009BEF63 /* Music_Streamz_ProjTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music_Streamz_ProjTests.swift; sourceTree = "<group>"; };
+		751FC70120993E5A009BEF63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		751FC70620993E5A009BEF63 /* Music Streamz ProjUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Music Streamz ProjUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		751FC70A20993E5A009BEF63 /* Music_Streamz_ProjUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music_Streamz_ProjUITests.swift; sourceTree = "<group>"; };
+		751FC70C20993E5A009BEF63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		751FC71E20993FC6009BEF63 /* PlaylistCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistCollectionViewCell.swift; sourceTree = "<group>"; };
+		751FC7202099402E009BEF63 /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
+		751FC72220994051009BEF63 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		751FC7242099407A009BEF63 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		754C61FA209C008F0090BBF7 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		75512DC7209BC57200CAA998 /* Handlee-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Handlee-Regular.ttf"; sourceTree = "<group>"; };
+		75512DCB209BC6B000CAA998 /* BreeSerif-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BreeSerif-Regular.ttf"; sourceTree = "<group>"; };
+		75512DD3209BC9F200CAA998 /* Abel-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Abel-Regular.ttf"; sourceTree = "<group>"; };
+		75512DD9209BCF9700CAA998 /* Luna.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Luna.ttf; sourceTree = "<group>"; };
+		757C7AA1891869590902FEA7 /* Pods_Music_Streamz_ProjTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Music_Streamz_ProjTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CD0237A2990A82CF4FE0F46 /* Pods-Music Streamz Proj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Music Streamz Proj.release.xcconfig"; path = "Pods/Target Support Files/Pods-Music Streamz Proj/Pods-Music Streamz Proj.release.xcconfig"; sourceTree = "<group>"; };
+		B1DA51E1BEAAFF0A5AFC54EF /* Pods-Music Streamz ProjTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Music Streamz ProjTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Music Streamz ProjTests/Pods-Music Streamz ProjTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B7E08B0F51B025CAB806E9F5 /* Pods-Music Streamz Proj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Music Streamz Proj.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Music Streamz Proj/Pods-Music Streamz Proj.debug.xcconfig"; sourceTree = "<group>"; };
+		D8191D8777837243DD9EA9EB /* Pods-Music Streamz ProjUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Music Streamz ProjUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Music Streamz ProjUITests/Pods-Music Streamz ProjUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FD17CB615931D35136916DE5 /* Pods_Music_Streamz_ProjUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Music_Streamz_ProjUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		751FC6E420993E5A009BEF63 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A77D97B4E4C9BEF3F18E1D5D /* Pods_Music_Streamz_Proj.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		751FC6F820993E5A009BEF63 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC42F4D3ED095E9AA2823FCD /* Pods_Music_Streamz_ProjTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		751FC70320993E5A009BEF63 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63B82322039A7E8227DF7EEF /* Pods_Music_Streamz_ProjUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4C15D40BC7FB8CD3E03BF601 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B7E08B0F51B025CAB806E9F5 /* Pods-Music Streamz Proj.debug.xcconfig */,
+				7CD0237A2990A82CF4FE0F46 /* Pods-Music Streamz Proj.release.xcconfig */,
+				B1DA51E1BEAAFF0A5AFC54EF /* Pods-Music Streamz ProjTests.debug.xcconfig */,
+				58E8E1B4E677444ABAE8A701 /* Pods-Music Streamz ProjTests.release.xcconfig */,
+				D8191D8777837243DD9EA9EB /* Pods-Music Streamz ProjUITests.debug.xcconfig */,
+				4977D6BD62A9CE8B6CFDE17E /* Pods-Music Streamz ProjUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		751FC6DE20993E59009BEF63 = {
+			isa = PBXGroup;
+			children = (
+				751FC6E920993E5A009BEF63 /* Music Streamz Proj */,
+				751FC6FE20993E5A009BEF63 /* Music Streamz ProjTests */,
+				751FC70920993E5A009BEF63 /* Music Streamz ProjUITests */,
+				751FC6E820993E5A009BEF63 /* Products */,
+				4C15D40BC7FB8CD3E03BF601 /* Pods */,
+				7B7381BE9360ADA820A9E337 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		751FC6E820993E5A009BEF63 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				751FC6E720993E5A009BEF63 /* Music Streamz Proj.app */,
+				751FC6FB20993E5A009BEF63 /* Music Streamz ProjTests.xctest */,
+				751FC70620993E5A009BEF63 /* Music Streamz ProjUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		751FC6E920993E5A009BEF63 /* Music Streamz Proj */ = {
+			isa = PBXGroup;
+			children = (
+				75512DD9209BCF9700CAA998 /* Luna.ttf */,
+				75512DD3209BC9F200CAA998 /* Abel-Regular.ttf */,
+				75512DCB209BC6B000CAA998 /* BreeSerif-Regular.ttf */,
+				75512DC7209BC57200CAA998 /* Handlee-Regular.ttf */,
+				751FC6EA20993E5A009BEF63 /* AppDelegate.swift */,
+				751FC6EC20993E5A009BEF63 /* ViewController.swift */,
+				754C61FA209C008F0090BBF7 /* SearchViewController.swift */,
+				751FC72220994051009BEF63 /* CartViewController.swift */,
+				751FC7202099402E009BEF63 /* CartTableViewCell.swift */,
+				751FC71E20993FC6009BEF63 /* PlaylistCollectionViewCell.swift */,
+				751FC7242099407A009BEF63 /* Song.swift */,
+				751FC6F120993E5A009BEF63 /* Assets.xcassets */,
+				751FC6F320993E5A009BEF63 /* LaunchScreen.storyboard */,
+				751FC6F620993E5A009BEF63 /* Info.plist */,
+			);
+			path = "Music Streamz Proj";
+			sourceTree = "<group>";
+		};
+		751FC6FE20993E5A009BEF63 /* Music Streamz ProjTests */ = {
+			isa = PBXGroup;
+			children = (
+				751FC6FF20993E5A009BEF63 /* Music_Streamz_ProjTests.swift */,
+				751FC70120993E5A009BEF63 /* Info.plist */,
+			);
+			path = "Music Streamz ProjTests";
+			sourceTree = "<group>";
+		};
+		751FC70920993E5A009BEF63 /* Music Streamz ProjUITests */ = {
+			isa = PBXGroup;
+			children = (
+				751FC70A20993E5A009BEF63 /* Music_Streamz_ProjUITests.swift */,
+				751FC70C20993E5A009BEF63 /* Info.plist */,
+			);
+			path = "Music Streamz ProjUITests";
+			sourceTree = "<group>";
+		};
+		7B7381BE9360ADA820A9E337 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4DC28399ACF1A9F92CB4D11B /* Pods_Music_Streamz_Proj.framework */,
+				757C7AA1891869590902FEA7 /* Pods_Music_Streamz_ProjTests.framework */,
+				FD17CB615931D35136916DE5 /* Pods_Music_Streamz_ProjUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		751FC6E620993E5A009BEF63 /* Music Streamz Proj */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 751FC70F20993E5A009BEF63 /* Build configuration list for PBXNativeTarget "Music Streamz Proj" */;
+			buildPhases = (
+				3879B5FD0F11ACFDF162630D /* [CP] Check Pods Manifest.lock */,
+				751FC6E320993E5A009BEF63 /* Sources */,
+				751FC6E420993E5A009BEF63 /* Frameworks */,
+				751FC6E520993E5A009BEF63 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Music Streamz Proj";
+			productName = "Music Streamz Proj";
+			productReference = 751FC6E720993E5A009BEF63 /* Music Streamz Proj.app */;
+			productType = "com.apple.product-type.application";
+		};
+		751FC6FA20993E5A009BEF63 /* Music Streamz ProjTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 751FC71220993E5A009BEF63 /* Build configuration list for PBXNativeTarget "Music Streamz ProjTests" */;
+			buildPhases = (
+				FC5315636262FF8FB3F878D6 /* [CP] Check Pods Manifest.lock */,
+				751FC6F720993E5A009BEF63 /* Sources */,
+				751FC6F820993E5A009BEF63 /* Frameworks */,
+				751FC6F920993E5A009BEF63 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				751FC6FD20993E5A009BEF63 /* PBXTargetDependency */,
+			);
+			name = "Music Streamz ProjTests";
+			productName = "Music Streamz ProjTests";
+			productReference = 751FC6FB20993E5A009BEF63 /* Music Streamz ProjTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		751FC70520993E5A009BEF63 /* Music Streamz ProjUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 751FC71520993E5A009BEF63 /* Build configuration list for PBXNativeTarget "Music Streamz ProjUITests" */;
+			buildPhases = (
+				96CD488F39FB4A55FF9AE772 /* [CP] Check Pods Manifest.lock */,
+				751FC70220993E5A009BEF63 /* Sources */,
+				751FC70320993E5A009BEF63 /* Frameworks */,
+				751FC70420993E5A009BEF63 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				751FC70820993E5A009BEF63 /* PBXTargetDependency */,
+			);
+			name = "Music Streamz ProjUITests";
+			productName = "Music Streamz ProjUITests";
+			productReference = 751FC70620993E5A009BEF63 /* Music Streamz ProjUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		751FC6DF20993E59009BEF63 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Pingdi Huang, Alicia Chen, Tyler Ishikawa";
+				TargetAttributes = {
+					751FC6E620993E5A009BEF63 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					751FC6FA20993E5A009BEF63 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 751FC6E620993E5A009BEF63;
+					};
+					751FC70520993E5A009BEF63 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 751FC6E620993E5A009BEF63;
+					};
+				};
+			};
+			buildConfigurationList = 751FC6E220993E59009BEF63 /* Build configuration list for PBXProject "Music Streamz Proj" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 751FC6DE20993E59009BEF63;
+			productRefGroup = 751FC6E820993E5A009BEF63 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				751FC6E620993E5A009BEF63 /* Music Streamz Proj */,
+				751FC6FA20993E5A009BEF63 /* Music Streamz ProjTests */,
+				751FC70520993E5A009BEF63 /* Music Streamz ProjUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		751FC6E520993E5A009BEF63 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75512DDA209BCF9700CAA998 /* Luna.ttf in Resources */,
+				751FC6F520993E5A009BEF63 /* LaunchScreen.storyboard in Resources */,
+				75512DC8209BC57200CAA998 /* Handlee-Regular.ttf in Resources */,
+				751FC6F220993E5A009BEF63 /* Assets.xcassets in Resources */,
+				75512DD4209BC9F200CAA998 /* Abel-Regular.ttf in Resources */,
+				75512DCC209BC6B000CAA998 /* BreeSerif-Regular.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		751FC6F920993E5A009BEF63 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		751FC70420993E5A009BEF63 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3879B5FD0F11ACFDF162630D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Music Streamz Proj-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		96CD488F39FB4A55FF9AE772 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Music Streamz ProjUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC5315636262FF8FB3F878D6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Music Streamz ProjTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		751FC6E320993E5A009BEF63 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				751FC7252099407A009BEF63 /* Song.swift in Sources */,
+				754C61FB209C008F0090BBF7 /* SearchViewController.swift in Sources */,
+				751FC6ED20993E5A009BEF63 /* ViewController.swift in Sources */,
+				751FC71F20993FC6009BEF63 /* PlaylistCollectionViewCell.swift in Sources */,
+				751FC72320994051009BEF63 /* CartViewController.swift in Sources */,
+				751FC6EB20993E5A009BEF63 /* AppDelegate.swift in Sources */,
+				751FC7212099402E009BEF63 /* CartTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		751FC6F720993E5A009BEF63 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				751FC70020993E5A009BEF63 /* Music_Streamz_ProjTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		751FC70220993E5A009BEF63 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				751FC70B20993E5A009BEF63 /* Music_Streamz_ProjUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		751FC6FD20993E5A009BEF63 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 751FC6E620993E5A009BEF63 /* Music Streamz Proj */;
+			targetProxy = 751FC6FC20993E5A009BEF63 /* PBXContainerItemProxy */;
+		};
+		751FC70820993E5A009BEF63 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 751FC6E620993E5A009BEF63 /* Music Streamz Proj */;
+			targetProxy = 751FC70720993E5A009BEF63 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		751FC6F320993E5A009BEF63 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				751FC6F420993E5A009BEF63 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		751FC70D20993E5A009BEF63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		751FC70E20993E5A009BEF63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		751FC71020993E5A009BEF63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7E08B0F51B025CAB806E9F5 /* Pods-Music Streamz Proj.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Music Streamz Proj/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "iOS-and-Backend-Final.Music-Streamz-Proj";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		751FC71120993E5A009BEF63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CD0237A2990A82CF4FE0F46 /* Pods-Music Streamz Proj.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Music Streamz Proj/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "iOS-and-Backend-Final.Music-Streamz-Proj";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		751FC71320993E5A009BEF63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1DA51E1BEAAFF0A5AFC54EF /* Pods-Music Streamz ProjTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Music Streamz ProjTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "iOS-and-Backend-Final.Music-Streamz-ProjTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Music Streamz Proj.app/Music Streamz Proj";
+			};
+			name = Debug;
+		};
+		751FC71420993E5A009BEF63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58E8E1B4E677444ABAE8A701 /* Pods-Music Streamz ProjTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Music Streamz ProjTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "iOS-and-Backend-Final.Music-Streamz-ProjTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Music Streamz Proj.app/Music Streamz Proj";
+			};
+			name = Release;
+		};
+		751FC71620993E5A009BEF63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8191D8777837243DD9EA9EB /* Pods-Music Streamz ProjUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Music Streamz ProjUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "iOS-and-Backend-Final.Music-Streamz-ProjUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Music Streamz Proj";
+			};
+			name = Debug;
+		};
+		751FC71720993E5A009BEF63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4977D6BD62A9CE8B6CFDE17E /* Pods-Music Streamz ProjUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Music Streamz ProjUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "iOS-and-Backend-Final.Music-Streamz-ProjUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Music Streamz Proj";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		751FC6E220993E59009BEF63 /* Build configuration list for PBXProject "Music Streamz Proj" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				751FC70D20993E5A009BEF63 /* Debug */,
+				751FC70E20993E5A009BEF63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		751FC70F20993E5A009BEF63 /* Build configuration list for PBXNativeTarget "Music Streamz Proj" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				751FC71020993E5A009BEF63 /* Debug */,
+				751FC71120993E5A009BEF63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		751FC71220993E5A009BEF63 /* Build configuration list for PBXNativeTarget "Music Streamz ProjTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				751FC71320993E5A009BEF63 /* Debug */,
+				751FC71420993E5A009BEF63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		751FC71520993E5A009BEF63 /* Build configuration list for PBXNativeTarget "Music Streamz ProjUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				751FC71620993E5A009BEF63 /* Debug */,
+				751FC71720993E5A009BEF63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 751FC6DF20993E59009BEF63 /* Project object */;
+}
