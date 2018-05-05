@@ -55,7 +55,7 @@ class Network {
     }
     
     static func getRecommendations(pickedSongs: [Song], limit: Int, _ completion: @escaping ([Song]) -> Void) {
-        let numToDrop = pickedSongs.count <= limit ? 0 : pickedSongs.count - limit
+        let numToDrop = pickedSongs.count <= 5 ? 0 : pickedSongs.count - 5
         let limitedPickedSongs = shuffleSongs(arr: pickedSongs).dropLast(numToDrop)
         
         var modPickedSongs: [[String: String]] = []

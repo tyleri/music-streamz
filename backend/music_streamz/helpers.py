@@ -19,13 +19,25 @@ def check_corresponding(dict_type, dict1, dict2):
   else:
     raise ValueError("Incorrect dict_type")
 
-def combine_and_dedup(dict_type, list1, list2):
+def combine_and_dedup(list1, list2):
+  """
+  Combines song dictionaries.
+  """
+
   full_list = list1 + list2
   idx1 = 0
   idx2 = 1
   while idx1 < len(full_list):
     while idx2 < len(full_list):
-      if check_corresponding(dict_type, full_list[idx1], full_list[idx2]):
+      dict1 = full_list[idx1]
+      dict2 = full_list[idx2]
+
+      if check_corresponding('song', dict1, dict2):
+        if dict1['spotify_id'] == '':
+          dict1['spotify_id'] = dict2['spotify_id']
+        if dict1['applemusic_id'] == '':
+          dict1['applemusic_id'] = dict2['applemusic_id']
+
         del full_list[idx2]
       else:
         idx2 += 1
@@ -58,7 +70,7 @@ def query_db_or_online(q, q_type, page):
   spotify_results = query_spotify(q, q_type, page)
   applemusic_results = query_applemusic(q, q_type, page)
 
-  query_result = combine_and_dedup(q_type, spotify_results, applemusic_results)
+  query_result = combine_and_dedup(spotify_results, applemusic_results)
 
   db.insert_searches_table(q, q_type, page, query_result)
   
@@ -225,12 +237,18 @@ def get_recommendations(list_picked_songs, limit=4):
 
   list_picked_ids = []
 
-  if not list_picked_songs:
-    list_picked_songs = [BASE_SONG]
-
   for song in list_picked_songs:
     query_result = db.query_songs_table(song['song_name'], song['artist_name'])
-    list_picked_ids.append(query_result['spotify_id'])
+
+    if query_result['spotify_id'] != '':
+      list_picked_ids.append(query_result['spotify_id'])
+    else:
+      query_result_again = query_online_for_song(song_name, artist_name)
+      if query_result_again and query_result_again['spotify_id'] != '':
+        list_picked_ids.append(query_result_again['spotify_id'])
+
+  if not list_picked_ids:
+    list_picked_ids = [BASE_SONG['spotify_id']]
 
   access_token = get_spotify_token()
 
@@ -266,4 +284,22 @@ def get_recommendations(list_picked_songs, limit=4):
     db.insert_songs_table(song['song_name'], song['artist_name'], spotify_id=song['spotify_id'])
 
   return recs
+
+def query_online_for_song(song_name, artist_name):
+  """
+    Return the Song dict if the specified song was found, else None
+  """
+  spotify_data = query_spotify(song_name + ' ' + artist_name, 'song', 1)
+  applemusic_data = query_applemusic(song_name + ' ' + artist_name, 'song', 1)
+
+  query_result = combine_and_dedup(spotify_results, applemusic_results)
+
+  result = None
+
+  for song in query_result:
+    db.insert_songs_table(song['song_name'], song['artist_name'], song['spotify_id'], song['applemusic_id'])
+    if song['song_name'] == song_name and song['artist_name'] == artist_name:
+      result = song
+
+  return result
 
