@@ -242,6 +242,7 @@ def get_recommendations(list_picked_songs, limit=4):
   }
   headers = {"Authorization": "Bearer " + access_token}
 
+  print("Sending request with: " + params)
   r = requests.get(url, params=params, headers=headers)
   if r.status_code != 200:
     raise ValueError('Error querying Spotify\n' + r.text)
