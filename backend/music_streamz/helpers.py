@@ -220,7 +220,7 @@ def query_applemusic(q, q_type, page):
 
   return mod_results
 
-def get_recommendations(list_picked_songs):
+def get_recommendations(list_picked_songs, limit=4):
   """
   list_picked_songs: list of {'song_name': SONG_NAME, 'artist_name': ARTIST_NAME}
   """
@@ -235,7 +235,7 @@ def get_recommendations(list_picked_songs):
 
   url = 'https://api.spotify.com/v1/recommendations'
   params = {
-    'limit': RESULTS_PER_PAGE,
+    'limit': limit,
     'market': 'US',
     'seed_tracks': ','.join(list_picked_ids)
   }

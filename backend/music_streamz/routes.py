@@ -42,16 +42,18 @@ def search():
 
 @app.route('/recommendation', methods=['POST'])
 def recommend():
-  list_picked_songs = request.get_json()
+  request_json = request.get_json()
+  list_picked_songs = request_json['picked_songs']
+  limit = request_json['limit']
 
   # validate
-  if type(list_picked_songs) is not list:
+  if type(list_picked_songs) is not list or type(limit) is not int:
     abort(400)
   
   for d in list_picked_songs:
     if 'song_name' not in d or 'artist_name' not in d:
       abort(400)
 
-  recs = get_recommendations(list_picked_songs)
+  recs = get_recommendations(list_picked_songs, limit=limit)
 
   return jsonify(recs)
