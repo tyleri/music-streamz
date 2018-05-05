@@ -233,20 +233,12 @@ def get_recommendations(list_picked_songs, limit=4):
 
   access_token = get_spotify_token()
 
-  if list_picked_ids:
-    url = 'https://api.spotify.com/v1/recommendations'
-    params = {
-      'limit': limit,
-      'market': 'US',
-      'seed_tracks': ','.join(list_picked_ids)
-    }
-  else:
-    url = 'https://api.spotify.com/v1/browse/new-releases'
-    params = {
-      'limit': limit,
-      'market': 'US'
-    }
-
+  url = 'https://api.spotify.com/v1/recommendations'
+  params = {
+    'limit': limit,
+    'market': 'US',
+    'seed_tracks': ','.join(list_picked_ids)
+  }
   headers = {"Authorization": "Bearer " + access_token}
 
   r = requests.get(url, params=params, headers=headers)
