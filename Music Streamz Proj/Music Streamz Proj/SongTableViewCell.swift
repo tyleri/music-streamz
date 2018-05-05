@@ -74,6 +74,10 @@ class SongTableViewCell: UITableViewCell {
         super.updateConstraints()
     }
     
+    override func prepareForReuse() {
+        selectionStyle = .none
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

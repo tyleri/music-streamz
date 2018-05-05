@@ -84,6 +84,8 @@ class SearchViewController: UITableViewController, UISearchResultsUpdating, UISe
             cell.albumImageView.image = newImage
         }
         
+        cell.accessoryType = selectedSongsSet.contains(currSong) ? .checkmark : .none
+        
         cell.setNeedsUpdateConstraints()
         
         return cell
