@@ -84,7 +84,7 @@ class DB(object):
             applemusic_id TEXT NOT NULL
         );
       """)
-      insert_songs_table(
+      self.insert_songs_table(
         BASE_SONG['song_name'],
         BASE_SONG['artist_name'],
         spotify_id=BASE_SONG['spotify_id']
