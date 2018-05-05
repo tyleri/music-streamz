@@ -115,6 +115,15 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         }
     }
     
+    func truncateInfo(text: String, number: Int) -> String {
+        //truncate accordingly to font size. Title = 16 characters, Artist = 20, Album = 24
+        if (text.count > number ) {
+            return String(text.prefix(number) + "...")
+        } else {
+            return text
+        }
+    }
+    
     @objc func searchButtonPressed(_ target: UIButton)
     {
         let searchVC = SearchViewController()
@@ -145,9 +154,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseCell, for: indexPath) as! PlaylistCollectionViewCell
         let song = recommendedSongs[indexPath.row]
-        cell.songLabel.text = song.name
-        cell.artistLabel.text = song.artist
-        cell.albumLabel.text = song.album
+        cell.songLabel.text = truncateInfo(text: song.name, number: 16)
+        cell.artistLabel.text = truncateInfo(text: song.artist, number: 20)
+        cell.albumLabel.text = truncateInfo(text: song.album, number: 24)
         cell.backgroundColor = UIColor(red: 221/225, green: 220/225, blue: 220/225, alpha: 0.8)
         
         let currSong = recommendedSongs[indexPath.row]
