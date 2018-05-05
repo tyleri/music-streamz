@@ -40,9 +40,26 @@ class Network {
         }
     }
     
+
+    static func shuffleSongs(arr: [Song]) -> [Song] {
+        var arr = Array(arr)
+        var i = arr.count - 1
+        
+        while i >= 1 {
+            let j = Int(arc4random_uniform(UInt32(i)) + 1)
+            arr.swapAt(i, j)
+            i -= 1
+        }
+        
+        return arr
+    }
+    
     static func getRecommendations(pickedSongs: [Song], limit: Int, _ completion: @escaping ([Song]) -> Void) {
+        let numToDrop = pickedSongs.count <= limit ? 0 : pickedSongs.count - limit
+        let limitedPickedSongs = shuffleSongs(arr: pickedSongs).dropLast(numToDrop)
+        
         var modPickedSongs: [[String: String]] = []
-        for currSong in pickedSongs {
+        for currSong in limitedPickedSongs {
             modPickedSongs.append([
                 "song_name": currSong.name,
                 "artist_name": currSong.artist

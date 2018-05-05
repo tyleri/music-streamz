@@ -9,18 +9,27 @@
 import UIKit
 import AVFoundation
 
+protocol SearchViewControllerDelegate {
+    func addSongsToCart(songs: [Song])
+    func createSongs()
+}
+
 class SearchViewController: UITableViewController, UISearchResultsUpdating, UISearchBarDelegate
 {
+    var delegate: SearchViewControllerDelegate?
     
     var searchController: UISearchController!
     var timer: Timer?
     var songsList: [Song] = []
+    var selectedSongsSet: Set<Song>!
     
     let songCellIndentifier = "SongCell"
     let cellHeight: CGFloat = 100
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        selectedSongsSet = Set<Song>()
         
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .done, target: self, action: #selector(dismissButtonPressed(sender:)))
         self.title = "Search"
@@ -41,6 +50,11 @@ class SearchViewController: UITableViewController, UISearchResultsUpdating, UISe
     
     @objc func dismissButtonPressed(sender: UIButton)
     {
+        for song in selectedSongsSet {
+            print(song)
+        }
+        delegate?.addSongsToCart(songs: Array(selectedSongsSet))
+        delegate?.createSongs()
         dismiss(animated: true, completion: nil)
     }
     
@@ -76,7 +90,16 @@ class SearchViewController: UITableViewController, UISearchResultsUpdating, UISe
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+        if let cell = tableView.cellForRow(at: indexPath as IndexPath) {
+            if cell.accessoryType == .none {
+                print(songsList[indexPath.row])
+                selectedSongsSet.insert(songsList[indexPath.row])
+                cell.accessoryType = .checkmark
+            } else {
+                selectedSongsSet.remove(songsList[indexPath.row])
+                cell.accessoryType = .none
+            }
+        }
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, AVAudioPlayerDelegate
+class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, AVAudioPlayerDelegate, SearchViewControllerDelegate
 {
     
     var homeTitle: UILabel!
@@ -118,6 +118,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     @objc func searchButtonPressed(_ target: UIButton)
     {
         let searchVC = SearchViewController()
+        searchVC.delegate = self
         let navController = UINavigationController(rootViewController: searchVC)
         self.present(navController, animated: true, completion: nil)
     }
@@ -185,6 +186,14 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 //        }
         cell.setNeedsUpdateConstraints()
         return cell
+    }
+    
+    func addSongsToCart(songs: [Song]) {
+        for song in songs {
+            if !pickedSongs.contains(song) {
+                pickedSongs.append(song)
+            }
+        }
     }
     
     

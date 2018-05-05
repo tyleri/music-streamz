@@ -18,6 +18,10 @@ class Song: NSObject {
     var imageUrl: String
     var audioUrl: String
     
+    override var description: String {
+        return "Song(\(name), \(artist), \(album))"
+    }
+    
     init(name: String, artist: String, album: String, imageUrl: String, audioUrl: String) {
         self.name = name
         self.artist = artist
