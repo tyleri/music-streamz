@@ -16,10 +16,12 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     var collectionView: UICollectionView!
     var searchButton: UIButton!
     var cartButton: UIButton!
-    var songs: [Song] = [Song]()
     let reuseCell = "reuseCollectionViewCell"
     var searchImage: UIImage!
     var player = AVAudioPlayer()
+    
+    var recommendedSongs: [Song] = []
+    var pickedSongs: [Song] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -107,11 +109,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     func createSongs() {
-        let song1 = Song(name: "Likey", artist: "Twice", album: "Twicetagram", imageUrl: "https://is3-ssl.mzstatic.com/image/thumb/Music118/v4/e8/83/01/e8830188-ff85-a4b6-6939-d450cbf1b56a/10-1_20171030_0AM_LIKEY-COVER-PHOTO_3000.jpg/268x0w.jpg", audioUrl: "https://p.scdn.co/mp3-preview/9604306c63f1c6dbe9a2d55ec49b96c9b746d13f?cid=121f626841d94410ae59706d9f7644c9")
-        let song2 = Song(name: "TT", artist: "Twice", album: "TWICEcoaster: Lane 1", imageUrl: "https://pre00.deviantart.net/2405/th/pre/f/2017/051/6/e/twice___twicecoaster___lane_1_by_tsukinofleur-damgdub.png", audioUrl: "https://p.scdn.co/mp3-preview/9604306c63f1c6dbe9a2d55ec49b96c9b746d13f?cid=121f626841d94410ae59706d9f7644c9")
-        let song3 = Song(name: "Scentist", artist: "VIXX", album: "Eau de Vixx", imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQM9w9GXTM4mgpPuUOYLhw7_eS3nbD-MJM-XAbAJD9AG3uyWTSs", audioUrl: "https://p.scdn.co/mp3-preview/29c02e7d34a5e1cb0ea01c975c2d421401cc7101?cid=121f626841d94410ae59706d9f7644c9")
-        let song4 = Song(name: "Done for Me", artist: "Charlie Puth ft. Kehlani", album: "Voicenotes", imageUrl: "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/4b/ea/5e/4bea5eb1-9cd2-e0c7-c0da-9ec0f230a44b/075679892041.jpg/600x600bf.jpg", audioUrl: "https://p.scdn.co/mp3-preview/29c02e7d34a5e1cb0ea01c975c2d421401cc7101?cid=121f626841d94410ae59706d9f7644c9")
-        songs = [song1, song2, song3, song4]
+        Network.getRecommendations(pickedSongs: pickedSongs, limit: 4) { (recommendations) in
+            self.recommendedSongs = recommendations
+            self.collectionView.reloadData()
+        }
     }
     
     @objc func searchButtonPressed(_ target: UIButton)
@@ -133,7 +134,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4 //front page suggestion songs
+        return recommendedSongs.count //front page suggestion songs
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -142,13 +143,13 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseCell, for: indexPath) as! PlaylistCollectionViewCell
-        let song = songs[indexPath.row]
+        let song = recommendedSongs[indexPath.row]
         cell.songLabel.text = song.name
         cell.artistLabel.text = song.artist
         cell.albumLabel.text = song.album
         cell.backgroundColor = UIColor(red: 221/225, green: 220/225, blue: 220/225, alpha: 0.8)
         
-        let currSong = songs[indexPath.row]
+        let currSong = recommendedSongs[indexPath.row]
         
         if let url = NSURL(string: currSong.imageUrl), let data = NSData(contentsOf: url as URL) {
             let urlImage = UIImage(data: data as Data)!

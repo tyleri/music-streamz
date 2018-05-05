@@ -8,8 +8,9 @@
 
 import UIKit
 import Foundation
+import SwiftyJSON
 
-class Song {
+class Song: NSObject {
     
     var name: String
     var artist: String
@@ -23,6 +24,14 @@ class Song {
         self.album = album
         self.imageUrl = imageUrl
         self.audioUrl = audioUrl
+    }
+    
+    init(json: JSON) {
+        self.name = json["song_name"].stringValue
+        self.artist = json["artist_name"].stringValue
+        self.album = json["album_name"].stringValue
+        self.imageUrl = json["album_image"].stringValue
+        self.audioUrl = json["preview_url"].stringValue
     }
 }
 

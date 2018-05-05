@@ -27,14 +27,53 @@ class Network {
                 let json = JSON(json).arrayValue
                 var listSongs: [Song] = []
                 
-                for song in json {
-                    let currSong = Song(
-                        name: song["song_name"].stringValue,
-                        artist: song["artist_name"].stringValue,
-                        album: song["album_name"].stringValue,
-                        imageUrl: song["album_image"].stringValue,
-                        audioUrl: song["preview_url"].stringValue
-                    )
+                for jsonSong in json {
+                    let currSong = Song(json: jsonSong)
+                    listSongs.append(currSong)
+                }
+                completion(listSongs)
+                
+            case .failure(let error):
+                print("Error: \(error)")
+                completion([])
+            }
+        }
+    }
+    
+    static func getRecommendations(pickedSongs: [Song], limit: Int, _ completion: @escaping ([Song]) -> Void) {
+        var modPickedSongs: [[String: String]] = []
+        for currSong in pickedSongs {
+            modPickedSongs.append([
+                "song_name": currSong.name,
+                "artist_name": currSong.artist
+            ])
+        }
+        
+        if modPickedSongs.isEmpty {
+            modPickedSongs = [[
+                "song_name": "Closer",
+                "artist_name": "The Chainsmokers"
+            ]]
+        }
+        
+        let parameters: Parameters = [
+            "picked_songs": modPickedSongs,
+            "limit": limit
+        ]
+        
+        Alamofire.request(
+            "\(endpoint)/recommendation",
+            method: HTTPMethod.post,
+            parameters: parameters,
+            encoding: JSONEncoding.default
+        ).validate().responseJSON { (response) in
+            switch response.result {
+            case .success(let json):
+                let json = JSON(json).arrayValue
+                var listSongs: [Song] = []
+                
+                for jsonSong in json {
+                    let currSong = Song(json: jsonSong)
                     listSongs.append(currSong)
                 }
                 completion(listSongs)

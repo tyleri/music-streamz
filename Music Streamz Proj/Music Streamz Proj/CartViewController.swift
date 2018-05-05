@@ -17,6 +17,9 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
     var headerTitle: UILabel!
     //var delegate: SaveButtonDelegate?
     
+    var pickedSongs: [Song] = []
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Playlist"
