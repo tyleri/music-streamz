@@ -292,7 +292,7 @@ def query_online_for_song(song_name, artist_name):
   spotify_data = query_spotify(song_name + ' ' + artist_name, 'song', 1)
   applemusic_data = query_applemusic(song_name + ' ' + artist_name, 'song', 1)
 
-  query_result = combine_and_dedup(spotify_results, applemusic_results)
+  query_result = combine_and_dedup(spotify_data, applemusic_data)
 
   result = None
 
