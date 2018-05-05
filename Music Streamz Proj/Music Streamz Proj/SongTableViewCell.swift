@@ -25,9 +25,7 @@ class SongTableViewCell: UITableViewCell {
         songNameLabel = UILabel()
         artistNameLabel = UILabel()
         albumNameLabel = UILabel()
-        
-        widthConstraints = []
-        
+                
         albumImageView.translatesAutoresizingMaskIntoConstraints = false
         songNameLabel.translatesAutoresizingMaskIntoConstraints = false
         artistNameLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -40,36 +38,29 @@ class SongTableViewCell: UITableViewCell {
     }
     
     override func updateConstraints() {
-        NSLayoutConstraint.deactivate(widthConstraints)
-        
         NSLayoutConstraint.activate([
             albumImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            albumImageView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
+            albumImageView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            albumImageView.widthAnchor.constraint(equalToConstant: (albumImageView.image?.size.width)!)
             ])
         
         NSLayoutConstraint.activate([
             songNameLabel.leadingAnchor.constraint(equalTo: albumImageView.trailingAnchor, constant: 16),
-            songNameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8)
+            songNameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
+            songNameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8)
             ])
         
         NSLayoutConstraint.activate([
             artistNameLabel.leadingAnchor.constraint(equalTo: songNameLabel.leadingAnchor),
-            artistNameLabel.topAnchor.constraint(equalTo: songNameLabel.bottomAnchor, constant: 8)
+            artistNameLabel.topAnchor.constraint(equalTo: songNameLabel.bottomAnchor, constant: 8),
+            artistNameLabel.trailingAnchor.constraint(equalTo: songNameLabel.trailingAnchor)
             ])
         
         NSLayoutConstraint.activate([
             albumNameLabel.leadingAnchor.constraint(equalTo: artistNameLabel.leadingAnchor),
-            albumNameLabel.topAnchor.constraint(equalTo: artistNameLabel.bottomAnchor, constant: 8)
+            albumNameLabel.topAnchor.constraint(equalTo: artistNameLabel.bottomAnchor, constant: 8),
+            albumNameLabel.trailingAnchor.constraint(equalTo: artistNameLabel.trailingAnchor)
             ])
-        
-        // width constraints
-        widthConstraints = [
-            songNameLabel.widthAnchor.constraint(equalToConstant: songNameLabel.intrinsicContentSize.width),
-            artistNameLabel.widthAnchor.constraint(equalToConstant: artistNameLabel.intrinsicContentSize.width),
-            albumNameLabel.widthAnchor.constraint(equalToConstant: albumNameLabel.intrinsicContentSize.width)
-        ]
-        
-        NSLayoutConstraint.activate(widthConstraints)
         
         super.updateConstraints()
     }
