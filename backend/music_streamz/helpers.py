@@ -2,16 +2,7 @@ import base64
 import requests
 import os
 from music_streamz import Db as db
-
-QUERY_TYPES = ['song', 'album', 'artist']
-RESULTS_PER_PAGE = 15
-
-BASE_SONG = {
-  "song_name": "Closer",
-  "artist_name": "The Chainsmokers",
-  "spotify_id": "7BKLCZ1jbUBVqRi2FVlTVw",
-  "applemusic_id": ""
-}
+from constants import *
 
 def check_corresponding(dict_type, dict1, dict2):
   """
@@ -233,6 +224,9 @@ def get_recommendations(list_picked_songs, limit=4):
   """
 
   list_picked_ids = []
+
+  if not list_picked_songs:
+    list_picked_songs = [BASE_SONG]
 
   for song in list_picked_songs:
     query_result = db.query_songs_table(song['song_name'], song['artist_name'])

@@ -1,7 +1,7 @@
 import os
 import json
 import sqlite3
-from helpers import *
+from constants import *
 
 # From: https://goo.gl/YzypOI
 def singleton(cls):
