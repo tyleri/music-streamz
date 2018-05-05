@@ -15,6 +15,8 @@ class PlaylistCollectionViewCell: UICollectionViewCell {
     var albumLabel: UILabel!
     var albumImage: UIImageView!
     
+    var widthConstraints: [NSLayoutConstraint] = []
+    
     override init(frame: CGRect){
         super.init(frame: frame)
         
@@ -50,22 +52,21 @@ class PlaylistCollectionViewCell: UICollectionViewCell {
     }
     
     override func updateConstraints() {
+        NSLayoutConstraint.deactivate(widthConstraints)
+        
         NSLayoutConstraint.activate([
             songLabel.topAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -64),
             songLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
-            songLabel.widthAnchor.constraint(equalToConstant: songLabel.intrinsicContentSize.width)
             ])
         
         NSLayoutConstraint.activate([
             artistLabel.topAnchor.constraint(equalTo: songLabel.bottomAnchor),
             artistLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
-            artistLabel.widthAnchor.constraint(equalToConstant: artistLabel.intrinsicContentSize.width)
             ])
         
         NSLayoutConstraint.activate([
             albumLabel.topAnchor.constraint(equalTo: artistLabel.bottomAnchor),
             albumLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
-            albumLabel.widthAnchor.constraint(equalToConstant: albumLabel.intrinsicContentSize.width)
             ])
         
         NSLayoutConstraint.activate([
@@ -74,6 +75,14 @@ class PlaylistCollectionViewCell: UICollectionViewCell {
             albumImage.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             albumImage.bottomAnchor.constraint(equalTo: songLabel.topAnchor, constant: -4)
             ])
+        
+        widthConstraints = [
+            songLabel.widthAnchor.constraint(equalToConstant: songLabel.intrinsicContentSize.width),
+            artistLabel.widthAnchor.constraint(equalToConstant: artistLabel.intrinsicContentSize.width),
+            albumLabel.widthAnchor.constraint(equalToConstant: albumLabel.intrinsicContentSize.width)
+        ]
+        
+        NSLayoutConstraint.activate(widthConstraints)
         
         super.updateConstraints()
     }
