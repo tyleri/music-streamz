@@ -244,7 +244,7 @@ def get_recommendations(list_picked_songs, limit=4):
 
   r = requests.get(url, params=params, headers=headers)
   if r.status_code != 200:
-    raise ValueError('Error querying Spotify')
+    raise ValueError('Error querying Spotify\n' + r.text)
 
   results = r.json()['tracks']
 
