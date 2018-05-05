@@ -243,7 +243,7 @@ def get_recommendations(list_picked_songs, limit=4):
     if query_result['spotify_id'] != '':
       list_picked_ids.append(query_result['spotify_id'])
     else:
-      query_result_again = query_online_for_song(song_name, artist_name)
+      query_result_again = query_online_for_song(song['song_name'], song['artist_name'])
       if query_result_again and query_result_again['spotify_id'] != '':
         list_picked_ids.append(query_result_again['spotify_id'])
 
