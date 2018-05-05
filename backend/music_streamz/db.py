@@ -1,6 +1,7 @@
 import os
 import json
 import sqlite3
+from helpers import *
 
 # From: https://goo.gl/YzypOI
 def singleton(cls):
@@ -83,6 +84,11 @@ class DB(object):
             applemusic_id TEXT NOT NULL
         );
       """)
+      insert_songs_table(
+        BASE_SONG['song_name'],
+        BASE_SONG['artist_name'],
+        spotify_id=BASE_SONG['spotify_id']
+      )
     except Exception as e: print e
 
 

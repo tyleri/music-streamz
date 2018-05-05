@@ -6,6 +6,13 @@ from music_streamz import Db as db
 QUERY_TYPES = ['song', 'album', 'artist']
 RESULTS_PER_PAGE = 15
 
+BASE_SONG = {
+  "song_name": "Closer",
+  "artist_name": "The Chainsmokers",
+  "spotify_id": "7BKLCZ1jbUBVqRi2FVlTVw",
+  "applemusic_id": ""
+}
+
 def check_corresponding(dict_type, dict1, dict2):
   """
   Returns true if the two dictionaries correspond, else false.
