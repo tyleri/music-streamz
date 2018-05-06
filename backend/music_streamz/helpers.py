@@ -1,6 +1,7 @@
 import base64
 import requests
 import os
+import random
 from music_streamz import Db as db
 from constants import *
 
@@ -62,8 +63,7 @@ def query_db_or_online(q, q_type, page):
   query_result = db.query_searches_table(q, q_type, page)
 
   # return if it was already found in db
-  # if query_result:
-  if False:
+  if query_result:
     return query_result
 
   # get data from online if it is not in DB and put it in DB
@@ -71,6 +71,7 @@ def query_db_or_online(q, q_type, page):
   applemusic_results = query_applemusic(q, q_type, page)
 
   query_result = combine_and_dedup(spotify_results, applemusic_results)
+  random.shuffle(query_result)
 
   db.insert_searches_table(q, q_type, page, query_result)
   

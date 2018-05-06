@@ -18,7 +18,7 @@ import os
 @app.route('/search', methods=['GET'])
 def search():
   q = request.args.get('q')
-  q_type = request.args.get('type')
+  q_type = 'song'
   page = request.args.get('page')
 
   if q is None:
