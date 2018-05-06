@@ -321,7 +321,7 @@ def get_better_service(list_picked_songs):
 
   for song in list_picked_songs:
     
-    query_result = db.query_for_song(song['song_name'], song['artist_name'])
+    query_result = query_for_song(song['song_name'], song['artist_name'])
     if query_result['spotify_id'] != '':
       num_spotify += 1
     if query_result['applemusic_id'] != '':
