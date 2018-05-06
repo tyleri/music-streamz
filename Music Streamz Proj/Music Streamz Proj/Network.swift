@@ -17,7 +17,6 @@ class Network {
     static func searchSongs(query: String, page: Int = 1, _ completion: @escaping ([Song]) -> Void) {
         let parameters: Parameters = [
             "q": query.replacingOccurrences(of: " ", with: "+"),
-            "type": "song",
             "page": page
         ]
         
