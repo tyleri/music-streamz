@@ -246,7 +246,7 @@ def get_recommendations(list_picked_songs, limit=4):
     if query_result['spotify_id'] != '':
       list_picked_ids.append(query_result['spotify_id'])
     else:
-      query_result_again = query_online_for_song(song['song_name'], song['artist_name'])
+      query_result_again = query_for_song(song['song_name'], song['artist_name'])
       if query_result_again and query_result_again['spotify_id'] != '':
         list_picked_ids.append(query_result_again['spotify_id'])
 
@@ -288,10 +288,19 @@ def get_recommendations(list_picked_songs, limit=4):
 
   return recs
 
-def query_online_for_song(song_name, artist_name):
+def query_for_song(song_name, artist_name):
   """
     Return the Song dict if the specified song was found, else None
   """
+  db_result = db.query_songs_table(song_name, artist_name)
+  if db_result['spotify_id'] != '' and db_result['applemusic_id'] != '':
+    return {
+      'song_name': song_name,
+      'artist_name': artist_name,
+      'spotify_id': db_result['spotify_id'],
+      'applemusic_id': db_result['applemusic_id']
+    }
+
   spotify_data = query_spotify(song_name + ' ' + artist_name, 'song', 1)
   applemusic_data = query_applemusic(song_name + ' ' + artist_name, 'song', 1)
 
@@ -305,4 +314,23 @@ def query_online_for_song(song_name, artist_name):
       result = song
 
   return result
+
+def get_better_service(list_picked_songs):
+  num_spotify = 0
+  num_applemusic = 0
+
+  for song in list_picked_songs:
+    
+    query_result = query_for_song(song['song_name'], song['artist_name'])
+    if query_result['spotify_id'] != '':
+      num_spotify += 1
+    if query_result['applemusic_id'] != '':
+      num_applemusic += 1
+  
+  if num_spotify > num_applemusic:
+    return 'Spotify'
+  elif num_applemusic > num_spotify:
+    return 'Apple Music'
+  else:
+    return 'both'
 

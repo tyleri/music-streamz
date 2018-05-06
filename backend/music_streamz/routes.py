@@ -58,3 +58,15 @@ def recommend():
   recs = get_recommendations(list_picked_songs, limit=limit)
 
   return jsonify(recs)
+
+@app.route('/better', methods=['POST'])
+def evaluate():
+  list_picked_songs = request.get_json()['picked_songs']
+
+  # validate
+  if type(list_picked_songs) is not list:
+    abort(400)
+
+  answer = get_better_service(list_picked_songs)
+
+  return jsonify(answer)
