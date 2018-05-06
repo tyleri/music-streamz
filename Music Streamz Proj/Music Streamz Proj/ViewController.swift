@@ -125,6 +125,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     {
         let searchVC = SearchViewController()
         searchVC.delegate = self
+        searchVC.selectedSongs = pickedSongs
         let navController = UINavigationController(rootViewController: searchVC)
         self.present(navController, animated: true, completion: nil)
     }
@@ -177,12 +178,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         return cell
     }
     
-    func addSongsToCart(songs: [Song]) {
-        for song in songs {
-            if !pickedSongs.contains(song) {
-                pickedSongs.append(song)
-            }
-        }
+    func updateSongsInCart(newSongs: [Song]) {
+        pickedSongs = newSongs
     }
     
     

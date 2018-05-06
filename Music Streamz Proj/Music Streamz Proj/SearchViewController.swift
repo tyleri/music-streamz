@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 
 protocol SearchViewControllerDelegate {
-    func addSongsToCart(songs: [Song])
+    func updateSongsInCart(newSongs: [Song])
     func createSongs()
 }
 
@@ -21,15 +21,13 @@ class SearchViewController: UITableViewController, UISearchResultsUpdating, UISe
     var searchController: UISearchController!
     var timer: Timer?
     var songsList: [Song] = []
-    var selectedSongsSet: Set<Song>!
-    
+    var selectedSongs: [Song] = []
+
     let songCellIndentifier = "SongCell"
     let cellHeight: CGFloat = 100
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        selectedSongsSet = Set<Song>()
         
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .done, target: self, action: #selector(dismissButtonPressed(sender:)))
         self.title = "Search"
@@ -51,10 +49,7 @@ class SearchViewController: UITableViewController, UISearchResultsUpdating, UISe
     
     @objc func dismissButtonPressed(sender: UIButton)
     {
-        for song in selectedSongsSet {
-            print(song)
-        }
-        delegate?.addSongsToCart(songs: Array(selectedSongsSet))
+        delegate?.updateSongsInCart(newSongs: selectedSongs)
         delegate?.createSongs()
         dismiss(animated: true, completion: nil)
     }
@@ -85,7 +80,13 @@ class SearchViewController: UITableViewController, UISearchResultsUpdating, UISe
             cell.albumImageView.image = newImage
         }
         
-        cell.accessoryType = selectedSongsSet.contains(currSong) ? .checkmark : .none
+        cell.accessoryType = .none
+        for song in selectedSongs {
+            if song == currSong {
+                cell.accessoryType = .checkmark
+                break
+            }
+        }
         
         cell.setNeedsUpdateConstraints()
         
@@ -95,11 +96,10 @@ class SearchViewController: UITableViewController, UISearchResultsUpdating, UISe
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let cell = tableView.cellForRow(at: indexPath as IndexPath) {
             if cell.accessoryType == .none {
-                print(songsList[indexPath.row])
-                selectedSongsSet.insert(songsList[indexPath.row])
+                selectedSongs.append(songsList[indexPath.row])
                 cell.accessoryType = .checkmark
             } else {
-                selectedSongsSet.remove(songsList[indexPath.row])
+                selectedSongs = selectedSongs.filter { $0 != songsList[indexPath.row] }
                 cell.accessoryType = .none
             }
         }

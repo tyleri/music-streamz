@@ -21,6 +21,14 @@ class Song: NSObject {
         return "Song(\(name), \(artist), \(album))"
     }
     
+    static func ==(lhs: Song, rhs: Song) -> Bool {
+        return lhs.name.lowercased() == rhs.name.lowercased() && lhs.artist.lowercased() == rhs.artist.lowercased()
+    }
+    
+    static func !=(lhs:Song, rhs: Song) -> Bool {
+        return !(lhs == rhs)
+    }
+    
     init(name: String, artist: String, album: String, imageUrl: String) {
         self.name = name
         self.artist = artist
