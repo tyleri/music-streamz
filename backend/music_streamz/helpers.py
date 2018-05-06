@@ -191,6 +191,7 @@ def query_applemusic(q, q_type, page):
   }
   headers = {"Authorization": "Bearer " + token}
 
+  print(params)
   r = requests.get(url, params=params, headers=headers)
   if r.status_code != 200:
     raise ValueError('Error querying Apple Music')
