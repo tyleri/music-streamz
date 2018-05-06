@@ -199,6 +199,9 @@ def query_applemusic(q, q_type, page):
     raise ValueError('Error querying Apple Music')
 
   print(r.json())
+  if type_mapping[q_type] not in r.json()['results']:
+    return []
+
   results = r.json()['results'][type_mapping[q_type]]['data']
 
   if q_type == 'song':
