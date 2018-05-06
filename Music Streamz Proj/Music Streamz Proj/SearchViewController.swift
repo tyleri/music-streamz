@@ -2,7 +2,7 @@
 //  SearchViewController.swift
 //  Music Streamz Proj
 //
-//  Created by Pingdi Huang on 5/3/18.
+//  Created by Alicia Chen on 5/3/18.
 //  Copyright © 2018 Pingdi Huang, Alicia Chen, Tyler Ishikawa. All rights reserved.
 //
 
@@ -33,11 +33,12 @@ class SearchViewController: UITableViewController, UISearchResultsUpdating, UISe
         
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .done, target: self, action: #selector(dismissButtonPressed(sender:)))
         self.title = "Search"
-
+        
         searchController = UISearchController(searchResultsController: nil)
         searchController.searchResultsUpdater = self
         searchController.searchBar.delegate = self
         searchController.dimsBackgroundDuringPresentation = false
+        searchController.searchBar.backgroundColor = .green
         searchController.searchBar.placeholder = "Search for artists, albums, songs"
         searchController.searchBar.sizeToFit()
         
@@ -65,7 +66,7 @@ class SearchViewController: UITableViewController, UISearchResultsUpdating, UISe
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: songCellIndentifier) as! SongTableViewCell
         let currSong = songsList[indexPath.row]
-        
+        cell.backgroundColor = UIColor(red: 35/225, green: 30/225, blue: 30/225, alpha: 1)
         cell.songNameLabel.text = currSong.name
         cell.artistNameLabel.text = currSong.artist
         cell.albumNameLabel.text = currSong.album

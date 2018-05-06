@@ -94,7 +94,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
             ])
     }
-
+    
     func resize(ratio: CGFloat, image: UIImage, resizeButton: UIButton)
     {
         let size = ratio/(image.size.height)
@@ -103,8 +103,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         renderFormat.opaque = false
         let renderer = UIGraphicsImageRenderer(size: adjustedSize, format: renderFormat)
         let newImage = renderer.image {
-                (context) in image.draw(in: CGRect(x: 0, y: 0, width: adjustedSize.width, height: adjustedSize.height))
-            }
+            (context) in image.draw(in: CGRect(x: 0, y: 0, width: adjustedSize.width, height: adjustedSize.height))
+        }
         resizeButton.setBackgroundImage(newImage, for: .normal)
     }
     
@@ -116,7 +116,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     func truncateInfo(text: String, number: Int) -> String {
-        //truncate accordingly to font size. Title = 16 characters, Artist = 20, Album = 24
+        //truncate accordingly to font size. Title = 16 characters, Artist = 17, Album = 19
         if (text.count > number ) {
             return String(text.prefix(number) + "...")
         } else {
@@ -147,24 +147,24 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return recommendedSongs.count //front page suggestion songs
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: CGFloat((collectionView.frame.size.width - 10)/2), height: 250)
+        return CGSize(width: CGFloat((collectionView.frame.size.width - 10)/2), height: 260)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseCell, for: indexPath) as! PlaylistCollectionViewCell
         let song = recommendedSongs[indexPath.row]
         cell.songLabel.text = truncateInfo(text: song.name, number: 16)
-        cell.artistLabel.text = truncateInfo(text: song.artist, number: 20)
-        cell.albumLabel.text = truncateInfo(text: song.album, number: 24)
+        cell.artistLabel.text = truncateInfo(text: song.artist, number: 17)
+        cell.albumLabel.text = truncateInfo(text: song.album, number: 19)
         cell.backgroundColor = UIColor(red: 221/225, green: 220/225, blue: 220/225, alpha: 0.8)
         
         let currSong = recommendedSongs[indexPath.row]
         
         if let url = NSURL(string: currSong.imageUrl), let data = NSData(contentsOf: url as URL) {
             let urlImage = UIImage(data: data as Data)!
-            let ratio = 200 / (urlImage.size.height)
+            let ratio = 250 / (urlImage.size.height)
             let newSize = CGSize(width: urlImage.size.width * ratio, height: urlImage.size.height * ratio)
             let renderFormat = UIGraphicsImageRendererFormat.default()
             renderFormat.opaque = false
@@ -176,24 +176,24 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             cell.albumImage.image = newImage
         }
         
-//        func downloadFileFromURL(url: NSURL){
-//            var task: URLSessionDownloadTask
-//            task = URLSession(configuration: .default).downloadTask(with: url, completionHandler: { [weak self] (URL, response, error) -> Void in
-//
-//                if True {
-//                    player.prepareToPlay()
-//                    player.volume = 1.0
-//                    player.play()
-//                } else {
-//                    print("File failed")
-//                }
-//            })
-//            task.resume()
-//        }
-//
-//        if let url = NSURL(string: currSong.audioUrl), let clip = NSData(contentsOf: url as URL){
-//            downloadFileFromURL(url: url)
-//        }
+        //        func downloadFileFromURL(url: NSURL){
+        //            var task: URLSessionDownloadTask
+        //            task = URLSession(configuration: .default).downloadTask(with: url, completionHandler: { [weak self] (URL, response, error) -> Void in
+        //
+        //                if True {
+        //                    player.prepareToPlay()
+        //                    player.volume = 1.0
+        //                    player.play()
+        //                } else {
+        //                    print("File failed")
+        //                }
+        //            })
+        //            task.resume()
+        //        }
+        //
+        //        if let url = NSURL(string: currSong.audioUrl), let clip = NSData(contentsOf: url as URL){
+        //            downloadFileFromURL(url: url)
+        //        }
         cell.setNeedsUpdateConstraints()
         return cell
     }

@@ -25,11 +25,11 @@ class PlaylistCollectionViewCell: UICollectionViewCell {
         songLabel.textColor = .black
         
         artistLabel = UILabel()
-        artistLabel.font = UIFont(name: "Handlee-Regular", size: 14)
+        artistLabel.font = UIFont(name: "Handlee-Regular", size: 17)
         artistLabel.textColor = .black
         
         albumLabel = UILabel()
-        albumLabel.font = UIFont(name: "Abel-Regular", size: 14)
+        albumLabel.font = UIFont(name: "Abel-Regular", size: 16)
         albumLabel.textColor = .purple
         
         albumImage = UIImageView()
@@ -55,7 +55,7 @@ class PlaylistCollectionViewCell: UICollectionViewCell {
         NSLayoutConstraint.deactivate(widthConstraints)
         
         NSLayoutConstraint.activate([
-            songLabel.topAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -64),
+            songLabel.topAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -70),
             songLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
             ])
         
@@ -73,7 +73,7 @@ class PlaylistCollectionViewCell: UICollectionViewCell {
             albumImage.topAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.topAnchor),
             albumImage.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             albumImage.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            albumImage.bottomAnchor.constraint(equalTo: songLabel.topAnchor, constant: -4)
+            albumImage.bottomAnchor.constraint(equalTo: songLabel.topAnchor)
             ])
         
         widthConstraints = [
