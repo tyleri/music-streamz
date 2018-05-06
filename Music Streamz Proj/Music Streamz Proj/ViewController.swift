@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, AVAudioPlayerDelegate, SearchViewControllerDelegate
+class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, SearchViewControllerDelegate
 {
     
     var homeTitle: UILabel!
@@ -18,7 +18,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     var cartButton: UIButton!
     let reuseCell = "reuseCollectionViewCell"
     var searchImage: UIImage!
-    var player = AVAudioPlayer()
     
     var recommendedSongs: [Song] = []
     var pickedSongs: [Song] = []
@@ -55,8 +54,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.register(PlaylistCollectionViewCell.self, forCellWithReuseIdentifier: reuseCell)
         layout.itemSize = CGSize(width: 180, height: 180)
-        
-        //player.delegate = self
         
         createSongs()
         
@@ -145,7 +142,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return recommendedSongs.count //front page suggestion songs
+        return recommendedSongs.count
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -176,24 +173,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             cell.albumImage.image = newImage
         }
         
-        //        func downloadFileFromURL(url: NSURL){
-        //            var task: URLSessionDownloadTask
-        //            task = URLSession(configuration: .default).downloadTask(with: url, completionHandler: { [weak self] (URL, response, error) -> Void in
-        //
-        //                if True {
-        //                    player.prepareToPlay()
-        //                    player.volume = 1.0
-        //                    player.play()
-        //                } else {
-        //                    print("File failed")
-        //                }
-        //            })
-        //            task.resume()
-        //        }
-        //
-        //        if let url = NSURL(string: currSong.audioUrl), let clip = NSData(contentsOf: url as URL){
-        //            downloadFileFromURL(url: url)
-        //        }
         cell.setNeedsUpdateConstraints()
         return cell
     }

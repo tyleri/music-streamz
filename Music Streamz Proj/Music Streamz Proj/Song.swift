@@ -16,18 +16,16 @@ class Song: NSObject {
     var artist: String
     var album: String
     var imageUrl: String
-    var audioUrl: String
     
     override var description: String {
         return "Song(\(name), \(artist), \(album))"
     }
     
-    init(name: String, artist: String, album: String, imageUrl: String, audioUrl: String) {
+    init(name: String, artist: String, album: String, imageUrl: String) {
         self.name = name
         self.artist = artist
         self.album = album
         self.imageUrl = imageUrl
-        self.audioUrl = audioUrl
     }
     
     init(json: JSON) {
@@ -35,7 +33,6 @@ class Song: NSObject {
         self.artist = json["artist_name"].stringValue
         self.album = json["album_name"].stringValue
         self.imageUrl = json["album_image"].stringValue
-        self.audioUrl = json["preview_url"].stringValue
     }
 }
 
