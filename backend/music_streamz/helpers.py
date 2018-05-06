@@ -306,3 +306,21 @@ def query_online_for_song(song_name, artist_name):
 
   return result
 
+def get_better_service(list_picked_songs):
+  num_spotify = 0
+  num_applemusic = 0
+
+  for song in list_picked_songs:
+    query_result = db.query_songs_table(song['song_name'], song['artist_name'])
+    if query_result['spotify_id'] != '':
+      num_spotify += 1
+    if query_result['applemusic_id'] != '':
+      num_applemusic += 1
+  
+  if num_spotify > num_applemusic:
+    return 'Spotify'
+  elif num_applemusic > num_spotify:
+    return 'Apple Music'
+  else:
+    return 'both'
+
