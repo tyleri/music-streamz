@@ -183,6 +183,7 @@ def query_applemusic(q, q_type, page):
   token = os.environ['APPLEMUSIC_TOKEN']
 
   url = 'https://api.music.apple.com/v1/catalog/us/search'
+  q = q.replace('-', '') # apple music doesn't like dashes
   params = {
     'term': q,
     'types': type_mapping[q_type],
