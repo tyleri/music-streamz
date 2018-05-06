@@ -139,6 +139,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     @objc func cartButtonPressed(_ target: UIButton)
     {
         let cartViewController = CartViewController()
+        cartViewController.pickedSongs = pickedSongs
         
         navigationController?.pushViewController(cartViewController, animated: true)
     }

@@ -18,6 +18,9 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
     //var delegate: SaveButtonDelegate?
     
     var pickedSongs: [Song] = []
+    
+    let songCellIdentifier: String = "SongCell"
+    let cellHeight: CGFloat = 100
 
     
     override func viewDidLoad() {
@@ -30,7 +33,7 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
         playlistTableView.dataSource = self
         playlistTableView.delegate = self
         playlistTableView.bounces = true
-        playlistTableView.register(CartTableViewCell.self, forCellReuseIdentifier: "cartCell")
+        playlistTableView.register(SongTableViewCell.self, forCellReuseIdentifier: songCellIdentifier)
         playlistTableView.translatesAutoresizingMaskIntoConstraints = false
         headerView = UIView()
         headerView.backgroundColor = UIColor(red: 35/225, green: 30/225, blue: 30/225, alpha: 1)
@@ -73,19 +76,45 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return pickedSongs.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cartCell") as! CartTableViewCell
-        cell.backgroundColor = UIColor(red: 221/225, green: 220/225, blue: 220/225, alpha: 0.8)
+        let cell = tableView.dequeueReusableCell(withIdentifier: songCellIdentifier) as! SongTableViewCell
+//        cell.backgroundColor = UIColor(red: 221/225, green: 220/225, blue: 220/225, alpha: 0.8)
+        cell.backgroundColor = UIColor(red: 35/225, green: 30/225, blue: 30/225, alpha: 1)
+        
+        let currSong = pickedSongs[indexPath.row]
+        
+        cell.songNameLabel.text = currSong.name
+        cell.artistNameLabel.text = currSong.artist
+        cell.albumNameLabel.text = currSong.album
+        
+        cell.songNameLabel.textColor = UIColor.lightText
+        cell.artistNameLabel.textColor = UIColor.lightText
+        cell.albumNameLabel.textColor = UIColor.lightText
+        
+        if let url = NSURL(string: currSong.imageUrl), let data = NSData(contentsOf: url as URL) {
+            let urlImage = UIImage(data: data as Data)!
+            let ratio = cellHeight / (urlImage.size.height)
+            let newSize = CGSize(width: urlImage.size.width * ratio, height: urlImage.size.height * ratio)
+            let renderFormat = UIGraphicsImageRendererFormat.default()
+            renderFormat.opaque = false
+            let renderer = UIGraphicsImageRenderer(size: newSize, format: renderFormat)
+            let newImage = renderer.image {
+                (context) in urlImage.draw(in: CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height))
+            }
+            
+            cell.albumImageView.image = newImage
+        }
+        
         cell.setNeedsUpdateConstraints()
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 40
+        return cellHeight
     }
     
     
