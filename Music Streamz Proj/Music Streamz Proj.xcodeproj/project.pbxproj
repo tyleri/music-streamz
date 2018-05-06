@@ -23,6 +23,7 @@
 		75512DD4209BC9F200CAA998 /* Abel-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75512DD3209BC9F200CAA998 /* Abel-Regular.ttf */; };
 		75512DDA209BCF9700CAA998 /* Luna.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75512DD9209BCF9700CAA998 /* Luna.ttf */; };
 		A77D97B4E4C9BEF3F18E1D5D /* Pods_Music_Streamz_Proj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DC28399ACF1A9F92CB4D11B /* Pods_Music_Streamz_Proj.framework */; };
+		BA590550209E89D6001C7DDF /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA59054F209E89D6001C7DDF /* ResultsViewController.swift */; };
 		BA9AFC47209CFB0600340659 /* SongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9AFC46209CFB0600340659 /* SongTableViewCell.swift */; };
 		BA9AFC49209CFC4E00340659 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9AFC48209CFC4E00340659 /* Network.swift */; };
 		CC42F4D3ED095E9AA2823FCD /* Pods_Music_Streamz_ProjTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 757C7AA1891869590902FEA7 /* Pods_Music_Streamz_ProjTests.framework */; };
@@ -73,6 +74,7 @@
 		7CD0237A2990A82CF4FE0F46 /* Pods-Music Streamz Proj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Music Streamz Proj.release.xcconfig"; path = "Pods/Target Support Files/Pods-Music Streamz Proj/Pods-Music Streamz Proj.release.xcconfig"; sourceTree = "<group>"; };
 		B1DA51E1BEAAFF0A5AFC54EF /* Pods-Music Streamz ProjTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Music Streamz ProjTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Music Streamz ProjTests/Pods-Music Streamz ProjTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B7E08B0F51B025CAB806E9F5 /* Pods-Music Streamz Proj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Music Streamz Proj.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Music Streamz Proj/Pods-Music Streamz Proj.debug.xcconfig"; sourceTree = "<group>"; };
+		BA59054F209E89D6001C7DDF /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		BA9AFC46209CFB0600340659 /* SongTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
 		BA9AFC48209CFC4E00340659 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		D8191D8777837243DD9EA9EB /* Pods-Music Streamz ProjUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Music Streamz ProjUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Music Streamz ProjUITests/Pods-Music Streamz ProjUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				75512DC7209BC57200CAA998 /* Handlee-Regular.ttf */,
 				751FC6EA20993E5A009BEF63 /* AppDelegate.swift */,
 				751FC6EC20993E5A009BEF63 /* ViewController.swift */,
+				BA59054F209E89D6001C7DDF /* ResultsViewController.swift */,
 				BA9AFC46209CFB0600340659 /* SongTableViewCell.swift */,
 				754C61FA209C008F0090BBF7 /* SearchViewController.swift */,
 				BA9AFC48209CFC4E00340659 /* Network.swift */,
@@ -415,6 +418,7 @@
 				751FC6ED20993E5A009BEF63 /* ViewController.swift in Sources */,
 				751FC71F20993FC6009BEF63 /* PlaylistCollectionViewCell.swift in Sources */,
 				BA9AFC47209CFB0600340659 /* SongTableViewCell.swift in Sources */,
+				BA590550209E89D6001C7DDF /* ResultsViewController.swift in Sources */,
 				BA9AFC49209CFC4E00340659 /* Network.swift in Sources */,
 				751FC72320994051009BEF63 /* CartViewController.swift in Sources */,
 				751FC6EB20993E5A009BEF63 /* AppDelegate.swift in Sources */,

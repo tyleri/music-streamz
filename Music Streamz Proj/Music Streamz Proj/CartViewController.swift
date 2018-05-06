@@ -51,6 +51,7 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
         resultsButton.setTitleColor(UIColor.white, for: .normal)
         resultsButton.backgroundColor = UIColor(red: 29/225, green: 185/225, blue: 84/225, alpha: 1)
         resultsButton.layer.cornerRadius = resultsButtonRadius
+        resultsButton.addTarget(self, action: #selector(resultsButtonPressed), for: .touchUpInside)
         resultsButton.translatesAutoresizingMaskIntoConstraints = false
         
         headerView.addSubview(headerTitle)
@@ -138,6 +139,11 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
         return cellHeight
     }
     
+    @objc func resultsButtonPressed() {
+        let vc = ResultsViewController()
+        vc.serviceName = "both"
+        navigationController?.pushViewController(vc, animated: true)
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
