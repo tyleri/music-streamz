@@ -61,7 +61,7 @@ def recommend():
 
 @app.route('/better', methods=['POST'])
 def evaluate():
-  list_picked_songs = request_json['picked_songs']
+  list_picked_songs = request.get_json()['picked_songs']
 
   # validate
   if type(list_picked_songs) is not list:
