@@ -140,9 +140,11 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     @objc func resultsButtonPressed() {
-        let vc = ResultsViewController()
-        vc.serviceName = "both"
-        navigationController?.pushViewController(vc, animated: true)
+        Network.getBetterService(pickedSongs: pickedSongs) { (answer) in
+            let vc = ResultsViewController()
+            vc.serviceName = answer
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     override func didReceiveMemoryWarning() {

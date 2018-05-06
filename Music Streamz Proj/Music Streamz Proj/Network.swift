@@ -66,13 +66,6 @@ class Network {
             ])
         }
         
-        if modPickedSongs.isEmpty {
-            modPickedSongs = [[
-                "song_name": "Closer",
-                "artist_name": "The Chainsmokers"
-            ]]
-        }
-        
         let parameters: Parameters = [
             "picked_songs": modPickedSongs,
             "limit": limit
@@ -99,6 +92,36 @@ class Network {
                 print("Error: \(error)")
                 completion([])
             }
+        }
+    }
+    
+    static func getBetterService(pickedSongs: [Song], _ completion: @escaping (String) -> Void) {
+        var modPickedSongs: [[String: String]] = []
+
+        for currSong in pickedSongs {
+            modPickedSongs.append([
+                "song_name": currSong.name,
+                "artist_name": currSong.artist
+                ])
+        }
+        
+        let parameters: Parameters = ["picked_songs": modPickedSongs]
+        
+        Alamofire.request(
+            "\(endpoint)/better",
+            method: HTTPMethod.post,
+            parameters: parameters,
+            encoding: JSONEncoding.default
+            ).validate().responseJSON { (response) in
+                switch response.result {
+                case .success(let json):
+                    let answer = JSON(json).stringValue
+                    completion(answer)
+                    
+                case .failure(let error):
+                    print("Error: \(error)")
+                    completion("")
+                }
         }
     }
 }
