@@ -117,12 +117,19 @@ class ResultsViewController: UIViewController {
             view.addSubview(appleMusicImage)
         }
         
+        if let spotifyImageView = spotifyImage {
+            let tap = UITapGestureRecognizer(target: self, action: #selector(linkSpotify))
+            spotifyImageView.addGestureRecognizer(tap)
+            spotifyImageView.isUserInteractionEnabled = true
+        }
         
-        
-        
+        if let appleMusicImageView = appleMusicImage {
+            let tap = UITapGestureRecognizer(target: self, action: #selector(linkAppleMusic))
+            appleMusicImageView.addGestureRecognizer(tap)
+            appleMusicImageView.isUserInteractionEnabled = true
+        }
         
         updateConstraints()
-
     }
     
     func updateConstraints() {
@@ -163,21 +170,19 @@ class ResultsViewController: UIViewController {
         return nil
     }
     
+    @objc func linkSpotify() {
+        UIApplication.shared.open(NSURL(string: "https://www.spotify.com/us/")! as URL, completionHandler: nil)
+    }
+    
+    @objc func linkAppleMusic() {
+        UIApplication.shared.open(NSURL(string: "https://www.apple.com/music/")! as URL, completionHandler: nil)
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
