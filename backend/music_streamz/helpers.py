@@ -209,7 +209,7 @@ def query_applemusic(q, q_type, page):
         'artist_name': song['attributes']['artistName'],
         'album_name': song['attributes']['albumName'],
         'album_image': song['attributes']['artwork']['url'].replace('{w}', '300').replace('{h}', '300'),
-        'preview_url': song['attributes']['previews'][0]['url']
+        'preview_url': song['attributes']['previews'][0]['url'] if song['attributes']['previews'] else ''
       }
       for song in results
     ]
