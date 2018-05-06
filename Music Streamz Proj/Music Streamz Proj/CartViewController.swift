@@ -15,12 +15,14 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
     var saveButton: UIButton!
     var dismissButton: UIButton!
     var headerTitle: UILabel!
+    var resultsButton: UIButton!
     //var delegate: SaveButtonDelegate?
     
     var pickedSongs: [Song] = []
     
     let songCellIdentifier: String = "SongCell"
     let cellHeight: CGFloat = 100
+    let resultsButtonRadius: CGFloat = 30
 
     
     override func viewDidLoad() {
@@ -43,8 +45,17 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
         headerTitle.font = UIFont(name: "Luna", size: 16)
         headerTitle.translatesAutoresizingMaskIntoConstraints = false
         
+        resultsButton = UIButton()
+        resultsButton.setTitle("→", for: .normal)
+        resultsButton.titleLabel?.font = .systemFont(ofSize: 30)
+        resultsButton.setTitleColor(UIColor.white, for: .normal)
+        resultsButton.backgroundColor = UIColor(red: 29/225, green: 185/225, blue: 84/225, alpha: 1)
+        resultsButton.layer.cornerRadius = resultsButtonRadius
+        resultsButton.translatesAutoresizingMaskIntoConstraints = false
+        
         headerView.addSubview(headerTitle)
         view.addSubview(playlistTableView)
+        view.addSubview(resultsButton)
         
         setUpConstraints()
     }
@@ -64,6 +75,12 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
             headerView.heightAnchor.constraint(equalToConstant: 50)
             ])
         
+        NSLayoutConstraint.activate([
+            resultsButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            resultsButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -16),
+            resultsButton.widthAnchor.constraint(equalToConstant: resultsButtonRadius * 2),
+            resultsButton.heightAnchor.constraint(equalToConstant: resultsButtonRadius * 2)
+            ])
     }
     
 //    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String?
@@ -94,6 +111,10 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.songNameLabel.textColor = UIColor.lightText
         cell.artistNameLabel.textColor = UIColor.lightText
         cell.albumNameLabel.textColor = UIColor.lightText
+        
+        cell.songNameLabel.font = UIFont(name: "BreeSerif-Regular", size: 18)
+        cell.artistNameLabel.font = UIFont(name: "Handlee-Regular", size: 18)
+        cell.albumNameLabel.font = UIFont(name: "Abel-Regular", size: 18)
         
         if let url = NSURL(string: currSong.imageUrl), let data = NSData(contentsOf: url as URL) {
             let urlImage = UIImage(data: data as Data)!

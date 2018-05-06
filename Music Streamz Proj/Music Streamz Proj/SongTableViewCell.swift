@@ -14,7 +14,7 @@ class SongTableViewCell: UITableViewCell {
     var artistNameLabel: UILabel!
     var albumNameLabel: UILabel!
     
-    var widthConstraints: [NSLayoutConstraint]!
+    var widthConstraints: [NSLayoutConstraint] = []
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -25,7 +25,7 @@ class SongTableViewCell: UITableViewCell {
         songNameLabel = UILabel()
         artistNameLabel = UILabel()
         albumNameLabel = UILabel()
-                
+        
         albumImageView.translatesAutoresizingMaskIntoConstraints = false
         songNameLabel.translatesAutoresizingMaskIntoConstraints = false
         artistNameLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -38,10 +38,11 @@ class SongTableViewCell: UITableViewCell {
     }
     
     override func updateConstraints() {
+        NSLayoutConstraint.deactivate(widthConstraints)
+        
         NSLayoutConstraint.activate([
             albumImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            albumImageView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
-            albumImageView.widthAnchor.constraint(equalToConstant: (albumImageView.image?.size.width)!)
+            albumImageView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
             ])
         
         NSLayoutConstraint.activate([
@@ -61,6 +62,12 @@ class SongTableViewCell: UITableViewCell {
             albumNameLabel.topAnchor.constraint(equalTo: artistNameLabel.bottomAnchor, constant: 8),
             albumNameLabel.trailingAnchor.constraint(equalTo: artistNameLabel.trailingAnchor)
             ])
+        
+        widthConstraints = [
+            albumImageView.widthAnchor.constraint(equalToConstant: (albumImageView.image?.size.width)!)
+        ]
+        
+        NSLayoutConstraint.activate(widthConstraints)
         
         super.updateConstraints()
     }
